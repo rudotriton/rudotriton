@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
 const MoveToBottom = keyframes`
@@ -7,20 +8,31 @@ const MoveToBottom = keyframes`
 `;
 
 const StyledLine = styled.line`
-  stroke: ${props => props.theme.color4};
+  stroke: ${props => props.theme.cyan};
   stroke-width: 1;
-  animation: 2s ${MoveToBottom} infinite cubic-bezier(1, 0.06, 0.78, 0);
-  animation-delay: ${props => props.delay / 10}s;
+  animation: 4s ${MoveToBottom} infinite cubic-bezier(1, 0.06, 0.78, 0);
+  /* animation: 1s ${MoveToBottom} infinite linear; */
+  animation-delay: ${props => props.delay / 4}s;
 `;
 
-export default ({
+export default function HorizontalLine({
   x1, x2, y1, y2, delay,
-}) => (
-  <StyledLine
-    x1={x1}
-    y1={y1}
-    x2={x2}
-    y2={y2}
-    delay={delay}
-  />
-);
+}) {
+  return (
+    <StyledLine
+      x1={x1}
+      y1={y1}
+      x2={x2}
+      y2={y2}
+      delay={delay}
+    />
+  );
+}
+
+HorizontalLine.propTypes = {
+  x1: PropTypes.string.isRequired,
+  y1: PropTypes.string.isRequired,
+  x2: PropTypes.string.isRequired,
+  y2: PropTypes.string.isRequired,
+  delay: PropTypes.number.isRequired,
+};

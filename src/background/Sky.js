@@ -1,11 +1,19 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import Star from './Star';
 
-const SkyBox = styled.div`
+const Pulse = keyframes`
+  0% { transform: scale(1, 1); }
+  50% { transform: scale(1.5, 1.5); }
+  100% { transform: scale(1, 1); }
+`;
+
+const BackDrop = styled.div`
   width: 100vw;
   height: 140vh;
-  background: rgb(143, 0, 138);
-  background: radial-gradient(circle, rgba(143, 0, 138, 1) 0%, rgba(48, 1, 108, 1) 40%, ${props => props.theme.black} 100%);
+  background: ${props => props.theme.darkPink};
+  background: radial-gradient(circle, ${props => props.theme.darkPink} 0%, ${props => props.theme.darkPurple} 40%, ${props => props.theme.black} 100%);
+  animation: 20s ${Pulse} linear infinite;
 `;
 
 const Sun = styled.div`
@@ -16,18 +24,19 @@ const Sun = styled.div`
   top: 65vh;
   left: 50vw;
   transform: translate(-50%, -50%);
-  background: rgb(252, 176, 69);
-  background: linear-gradient(180deg, rgba(252, 176, 69, 1) 0%, rgba(253, 29, 29, 1) 36%, rgba(131, 58, 180, 1) 77%);
+  background: ${props => props.theme.yellow};
+  background: linear-gradient(180deg, ${props => props.theme.yellow} 0%, ${props => props.theme.red} 36%, ${props => props.theme.purple} 77%);
 `;
 
 const Mist = styled.div`
   width: 100vw;
   height: 0;
+  z-index: 5;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 70vh;
+  top: 65vh;
   left: 50vw;
-  box-shadow: 0 0 200px 80px ${props => props.theme.color1};
+  box-shadow: 0 0 200px 80px ${props => props.theme.pink};
 `;
 
 const LeftMountain = styled.div`
@@ -36,7 +45,7 @@ const LeftMountain = styled.div`
   height: 10vh;
   top: 60vh;
   background: ${props => props.theme.black};
-  background: linear-gradient(0deg, ${props => props.theme.black} 0%, rgba(30, 0, 77, 1) 100%);
+  background: linear-gradient(0deg, ${props => props.theme.black} 0%, ${props => props.theme.darkestPurple} 100%);
   clip-path:
     polygon(
       0 0%,
@@ -81,7 +90,7 @@ const RightMountain = styled.div`
   top: 60vh;
   right: 0;
   background: ${props => props.theme.black};
-  background: linear-gradient(0deg, ${props => props.theme.black} 0%, rgba(30, 0, 77, 1) 100%);
+  background: linear-gradient(0deg, ${props => props.theme.black} 0%, ${props => props.theme.darkestPurple} 100%);
   clip-path:
     polygon(
       0 0%,
@@ -120,24 +129,6 @@ const RightMountain = styled.div`
   transform: rotateY(180deg);
 `;
 
-const Blink = keyframes`
-  0% { background-color: #fff; }
-  50% { background-color: transparent; }
-  100% { background-color: #fff; }
-`;
-
-const Star = styled.div`
-  width: 2px;
-  height: 2px;
-  position: absolute;
-  border-radius: 50%;
-  top: ${props => props.y};
-  left: ${props => props.x};
-  background-color: white;
-  animation: 8s ${Blink} infinite cubic-bezier(1, 0.06, 0.78, 0);
-  animation-delay: ${props => props.delay / 10}s;
-`;
-
 export default class Sky extends React.Component {
   generateStars = () => {
     const stars = [];
@@ -146,6 +137,8 @@ export default class Sky extends React.Component {
         <Star
           key={i}
           delay={i}
+          speed={Math.floor(Math.random() * 5 + 4)}
+          opacity={Math.random()}
           x={`${Math.floor(Math.random() * 100 + 1)}vw`}
           y={`${Math.floor(Math.random() * 60 + 1)}vh`}
         />,
@@ -156,7 +149,8 @@ export default class Sky extends React.Component {
 
   render() {
     return (
-      <SkyBox>
+      <>
+        <BackDrop />
         {
           this.generateStars()
         }
@@ -164,7 +158,7 @@ export default class Sky extends React.Component {
         <LeftMountain />
         <RightMountain />
         <Mist />
-      </SkyBox>
+      </>
     );
   }
 }

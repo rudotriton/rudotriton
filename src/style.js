@@ -32,12 +32,15 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const theme = {
-  color1: '#FF0082',
-  color2: '#CA3AA2',
-  color3: '#8D50AA',
-  color4: '#4cfff9',
-  color5: '#00C1FF',
-  color6: '#140035',
+  pink: '#FF0082',
+  darkPink: 'rgba(143, 0, 138, 1)',
+  red: 'rgba(253, 29, 29, 1)',
+  purple: 'rgba(131, 58, 180, 1)',
+  yellow: 'rgba(252, 176, 69, 1)',
+  cyan: '#4cfff9',
+  darkBlue: 'rgba(0, 39, 143, 1)',
+  darkPurple: 'rgba(48, 1, 108, 1)',
+  darkestPurple: 'rgba(30, 0, 77, 1)',
   white: '#FFFFFF',
   black: '#000',
   font: 'Montserrat',
