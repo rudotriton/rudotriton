@@ -30,7 +30,7 @@ const BackDrop = styled.div`
 const Mist = styled.div`
   width: 100vw;
   height: 0;
-  z-index: 15;
+  z-index: 25;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 65vh;

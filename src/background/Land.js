@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 
 const Mist = styled.div`
   width: 100vw;
-  height: 3vh;
+  height: 20px;
   position: absolute;
   background-color: ${props => props.theme.cyan};
   clip-path: polygon(0 0, 100vw 0, 100vw 100%, 50vw 0, 0 100%);
@@ -40,7 +40,6 @@ const Line = styled.line`
   stroke-width: 1;
 `;
 
-
 export default class Land extends React.Component {
   generateVerticals = () => {
     const verticals = [];
@@ -49,7 +48,6 @@ export default class Land extends React.Component {
       verticals.push(
         <Line
           key={i}
-          // x1="50vw"
           x1="50%"
           y1="0"
           x2={`${i * 1500}`}

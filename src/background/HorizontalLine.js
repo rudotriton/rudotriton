@@ -11,7 +11,6 @@ const StyledLine = styled.line`
   stroke: ${props => props.theme.cyan};
   stroke-width: 1;
   animation: 4s ${MoveToBottom} infinite cubic-bezier(1, 0.06, 0.78, 0);
-  /* animation: 1s ${MoveToBottom} infinite linear; */
   animation-delay: ${props => props.delay / 4}s;
 `;
 
