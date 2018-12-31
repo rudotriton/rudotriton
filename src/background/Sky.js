@@ -10,9 +10,17 @@ const Pulse = keyframes`
   100% { transform: scale(1, 1); }
 `;
 
+const Wrapper = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+`;
+
 const BackDrop = styled.div`
   width: 100vw;
   height: 140vh;
+  overflow: hidden;
   background: ${props => props.theme.darkPink};
   background: radial-gradient(circle, ${props => props.theme.darkPink} 0%, ${props => props.theme.darkPurple} 40%, ${props => props.theme.black} 100%);
   animation: 10s ${Pulse} linear infinite;
@@ -50,7 +58,7 @@ export default class Sky extends React.Component {
 
   render() {
     return (
-      <>
+      <Wrapper>
         <BackDrop />
         {
           this.generateStars()
@@ -58,7 +66,7 @@ export default class Sky extends React.Component {
         <Sun />
         <Mountains />
         <Mist />
-      </>
+      </Wrapper>
     );
   }
 }

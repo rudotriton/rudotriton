@@ -2,16 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from './style';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
-// import Test from './Test';
+import Background from './background/Background';
 
 const jsx = (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
-      <App />
-      {/* <Test /> */}
+      <Background />
     </>
   </ThemeProvider>
 );
