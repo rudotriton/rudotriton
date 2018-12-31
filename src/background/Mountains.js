@@ -66,11 +66,11 @@ const LeftMountain = styled.div`
       100% 100%,
       0 100%
     );
-  animation:
+  /* animation:
     ${props => (props.color === '2' ? '0.2s' : '0.1s')}
     ${Flicker}
     ${props => CubicBez(props.color)}
-    infinite;
+    infinite; */
 `;
 
 const RightMountain = styled.div`
@@ -125,33 +125,33 @@ const RightMountain = styled.div`
       0 100%
     );
   transform: rotateY(180deg);
-  animation:
+  /* animation:
     ${props => (props.color === '2' ? '0.1s' : '0.2s')}
     ${Flicker}
     ${props => CubicBez(props.color)}
-    infinite;
+    infinite; */
 `;
 
 const Mountains = () => (
   <>
     <LeftMountain zindex="10" />
-    <LeftMountain
+    {/* <LeftMountain
       color="1"
       zindex="9"
     />
     <LeftMountain
       color="2"
       zindex="9"
-    />
+    /> */}
     <RightMountain zindex="10" />
-    <RightMountain
+    {/* <RightMountain
       color="1"
       zindex="9"
     />
     <RightMountain
       color="2"
       zindex="9"
-    />
+    /> */}
   </>
 );
 
