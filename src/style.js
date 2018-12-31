@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme.white};
+    background-color: ${props => props.theme.black};
   }
 
   * {
@@ -43,6 +43,8 @@ export const theme = {
   darkestPurple: 'rgba(30, 0, 77, 1)',
   white: '#FFFFFF',
   black: '#000',
+  glitch1: '#FF0082',
+  glitch2: 'rgba(0, 39, 143, 1)',
   font: 'Montserrat',
   fontLarge: '3rem',
   fontMedium: '2rem',

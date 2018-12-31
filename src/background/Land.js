@@ -5,6 +5,7 @@ import HorizontalLine from './HorizontalLine';
 const Wrapper = styled.div`
   height: 30vh;
   width: 100vw;
+  z-index: 20;
   position: absolute;
   top: 70vh;
   overflow: hidden;
