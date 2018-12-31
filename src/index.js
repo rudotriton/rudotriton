@@ -4,12 +4,14 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, theme } from './style';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+// import Test from './Test';
 
 const jsx = (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
       <App />
+      {/* <Test /> */}
     </>
   </ThemeProvider>
 );

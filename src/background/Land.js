@@ -45,14 +45,15 @@ export default class Land extends React.Component {
   generateVerticals = () => {
     const verticals = [];
 
-    for (let i = -20; i <= 20; i += 1) {
+    for (let i = -30; i <= 30; i += 1) {
       verticals.push(
         <Line
           key={i}
-          x1="50vw"
-          y1="0vh"
-          x2={`${i * 100}vw`}
-          y2="100vh"
+          // x1="50vw"
+          x1="50%"
+          y1="0"
+          x2={`${i * 1500}`}
+          y2="1000"
         />,
       );
     }
@@ -66,10 +67,10 @@ export default class Land extends React.Component {
       horizontals.push(
         <HorizontalLine
           key={i}
-          x1="0vw"
-          y1="0vh"
-          x2="100vw"
-          y2="0vh"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="0%"
           delay={i}
         />,
       );
