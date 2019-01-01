@@ -23,11 +23,27 @@ const Flicker = color => keyframes`
   55% { text-shadow: none; }
 `;
 
+const FadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, +40%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
 const Wrapper = styled.div`
   position: absolute;
   top: 30vh;
   left: 50vw;
   transform: translate(-50%, -50%);
+`;
+
+const TitleWrap = styled.div`
+  animation: ${FadeIn} 2s linear;
 `;
 
 const Title = styled.h1`
@@ -40,7 +56,7 @@ const Title = styled.h1`
   letter-spacing: -1px;
   color: transparent;
   -webkit-text-stroke: 2px white;
-  ${props => media.phone`font-size: ${props.theme.fontMedium}`}
+  ${props => media.phone`font-size: ${props.theme.fontMedium};`}
 
   &::after {
     background: none;
@@ -53,26 +69,60 @@ const Title = styled.h1`
   }
 `;
 
-const SubTitle = styled.h2`
-  left: 25%;
-  bottom: 50%;
+const SlideAppear = keyframes`
+  0% {
+    clip-path:
+      polygon(
+        0 0,
+        0 0,
+        0 100%,
+        0 100%
+      );
+  }
+
+  100% {
+    clip-path:
+      polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        0 100%
+      );
+  }
+`;
+
+const SubTitleWrap = styled.div`
+  padding: 30px 50px;
+  left: 15%;
+  bottom: 35%;
   position: absolute;
+  clip-path:
+    polygon(
+      0 0,
+      0 0,
+      0 100%,
+      0 100%
+    );
+  animation: ${SlideAppear} 4s 2s linear forwards;
+`;
+
+const SubTitle = styled.h2`
   font-size: ${props => props.theme.fontLarge};
   font-family: ${props => props.theme.fontCursive};
+  font-weight: bold;
   color: ${props => props.theme.white};
-  text-shadow:
-    0 0 40px ${props => props.theme.cyan},
-    0 0 40px ${props => props.theme.cyan},
-    0 0 40px ${props => props.theme.cyan},
-    0 0 10px ${props => props.theme.cyan};
-  animation: ${props => Flicker(props.theme.cyan)} 1.5s infinite alternate;
-  ${props => media.phone`font-size: ${props.theme.fontMedium}`}
+  animation: ${props => Flicker(props.theme.cyan)} 1.5s 6s infinite alternate;
+  ${props => media.phone`font-size: ${props.theme.fontMedium};`}
 `;
 
 const Text = () => (
   <Wrapper>
-    <SubTitle>Raigo</SubTitle>
-    <Title>JERVA</Title>
+    <SubTitleWrap>
+      <SubTitle>Raigo</SubTitle>
+    </SubTitleWrap>
+    <TitleWrap>
+      <Title>JERVA</Title>
+    </TitleWrap>
   </Wrapper>
 );
 

@@ -5,10 +5,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 62.5%;
     font-family: ${props => props.theme.font};
-
-    @media only screen and (max-width: ${props => props.theme.bpMedium}) {
-      font-size: 56.25%;
-    }
   }
 
   ::-webkit-scrollbar {
