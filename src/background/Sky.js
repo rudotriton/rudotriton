@@ -21,6 +21,8 @@ const BackDrop = styled.div`
   width: 100vw;
   height: 140vh;
   overflow: hidden;
+  position: relative;
+  z-index: -5;
   background: ${props => props.theme.darkPink};
   background: radial-gradient(circle, ${props => props.theme.darkPink} 0%, ${props => props.theme.darkPurple} 40%, ${props => props.theme.black} 100%);
   animation: 10s ${Pulse} linear infinite;
