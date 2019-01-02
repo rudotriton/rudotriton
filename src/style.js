@@ -42,7 +42,7 @@ export const theme = {
   black: '#000',
   glitch1: '#FF0082',
   glitch2: 'rgba(0, 39, 143, 1)',
-  reflectiveChrome: 'linear-gradient(180deg, rgba(158,11,255,1) 18%, rgba(11,18,255,1) 24%, rgba(0,249,255,1) 30%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 49%, rgba(18,18,18,1) 49%, rgba(201,18,207,1) 56%, rgba(0,123,255,1) 71%, rgba(255,255,255,1) 100%)',
+  reflectiveChrome: 'linear-gradient(180deg, rgba(158,11,255,1) 18%, rgba(11,18,185,1) 24%, rgba(0,212,255,1) 30%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 49%, rgba(38,38,38,1) 49%, rgba(201,18,207,1) 56%, rgba(0,123,255,1) 64%, rgba(255,255,255,1) 75%)',
   fontCursive: 'Mr De Haviland',
   fontBoldItalic: 'Chakra Petch',
   fontLarge: '15rem',

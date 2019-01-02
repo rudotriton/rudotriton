@@ -37,6 +37,7 @@ const FadeIn = keyframes`
 
 const Wrapper = styled.div`
   position: absolute;
+  margin-top: 40px;
   top: 30vh;
   left: 50vw;
   transform: translate(-50%, -50%);
@@ -92,8 +93,8 @@ const SlideAppear = keyframes`
 `;
 
 const SubTitleWrap = styled.div`
-  padding: 30px 50px;
-  left: 15%;
+  padding: 30px 75px;
+  left: 10%;
   bottom: 35%;
   position: absolute;
   clip-path:
@@ -104,6 +105,7 @@ const SubTitleWrap = styled.div`
       0 100%
     );
   animation: ${SlideAppear} 4s 2s linear forwards;
+  ${media.phone`left: 10%; bottom: 30%;`}
 `;
 
 const SubTitle = styled.h2`
