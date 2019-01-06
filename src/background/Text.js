@@ -1,5 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { Link } from 'react-router-dom';
+import Typed from 'react-typed';
 import media from '../util/mediaQueries';
 
 const Flicker = color => keyframes`
@@ -117,15 +119,46 @@ const SubTitle = styled.h2`
   ${props => media.phone`font-size: ${props.theme.fontMedium};`}
 `;
 
+const StyledLink = styled(Link)`
+  font-size: ${props => props.theme.fontSmall};
+  font-family: ${props => props.theme.fontMonospace};
+  color: white;
+  position: absolute;
+  top: 90vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  /* transition: 2s ease; */
+  z-index: 50;
+  background-color: black;
+  border-bottom: 2px solid transparent;
+  padding: 5px 5px 5px 10px;
+
+  &:hover {
+    border-bottom: 2px solid white;
+  }
+`;
+
 const Text = () => (
-  <Wrapper>
-    <SubTitleWrap>
-      <SubTitle>Raigo</SubTitle>
-    </SubTitleWrap>
-    <TitleWrap>
-      <Title>JERVA</Title>
-    </TitleWrap>
-  </Wrapper>
+  <>
+    <Wrapper>
+      <SubTitleWrap>
+        <SubTitle>Raigo</SubTitle>
+      </SubTitleWrap>
+      <TitleWrap>
+        <Title>JERVA</Title>
+      </TitleWrap>
+    </Wrapper>
+    <StyledLink to="/home">
+      <Typed
+        strings={['Continue', 'Proceed', 'Carry On', 'Advance', 'Go On']}
+        typeSpeed={100}
+        backSpeed={100}
+        backDelay={8000}
+        loop
+      />
+    </StyledLink>
+  </>
 );
 
 export default Text;
