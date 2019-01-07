@@ -128,7 +128,7 @@ const StyledLink = styled(Link)`
   left: 50vw;
   transform: translate(-50%, -50%);
   text-decoration: none;
-  /* transition: 2s ease; */
+  transition: 0.25s ease;
   z-index: 50;
   background-color: black;
   border-bottom: 2px solid transparent;
