@@ -3,8 +3,9 @@ import {
   Router, Route, Switch,
 } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
-import Home from '../home/Home';
+import Home from '../components/Home';
 import BackGround from '../background/Background';
+import NotFoundPage from '../components/NotFoundPage';
 
 const history = createHistory();
 
@@ -13,7 +14,7 @@ const AppRouter = () => (
     <Switch>
       <Route exact path="/" component={BackGround} />
       <Route path="/home" component={Home} />
-      {/* <Route component={NotFoundPage} /> */}
+      <Route component={NotFoundPage} />
     </Switch>
   </Router>
 );

@@ -51,7 +51,7 @@ const StyledLink = styled(Link)`
 const Home = () => (
   <Wrapper>
     <Box>
-      Hi, my name is Raigo and I am learning to be a web developer and a designer.
+      Hi, my name is Raigo and I am learning to become a web developer and a designer.
     </Box>
     <Github />
     <StyledLink to="/">Back to animation</StyledLink>
