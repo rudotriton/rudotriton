@@ -107,7 +107,7 @@ const SubTitleWrap = styled.div`
       0 100%
     );
   animation: ${SlideAppear} 4s 2s linear forwards;
-  ${media.phone`left: 10%; bottom: 30%;`}
+  ${media.phone`left: 3%; bottom: 30%;`}
 `;
 
 const SubTitle = styled.h2`
