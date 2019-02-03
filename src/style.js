@@ -45,6 +45,7 @@ export const theme = {
   glitch2: 'rgba(0, 39, 143, 1)',
   reflectiveChrome: 'linear-gradient(180deg, rgba(158,11,255,1) 18%, rgba(11,18,185,1) 24%, rgba(0,212,255,1) 30%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 49%, rgba(38,38,38,1) 49%, rgba(201,18,207,1) 56%, rgba(0,123,255,1) 64%, rgba(255,255,255,1) 75%)',
   textBoxGradient: 'linear-gradient(159deg, rgba(70, 160, 249, 1) 0%, rgba(184,5,246,1) 50%, rgba(255,0,130,1) 100%)',
+  brandGradient: 'linear-gradient(270deg, #5e00bc, #ff4c93, #ff567f, #ff6363);',
   fontCursive: 'Mr De Haviland',
   fontBoldItalic: 'Chakra Petch',
   fontMonospace: 'Share Tech Mono',

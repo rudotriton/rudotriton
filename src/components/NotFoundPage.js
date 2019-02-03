@@ -1,6 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
+
+const bgAnimation = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+`;
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -12,7 +26,23 @@ const Wrapper = styled.div`
   color: ${props => props.theme.white};
   font-family: ${props => props.theme.fontMonospace};
   padding: 50px;
-  background: ${props => props.theme.textBoxGradient};
+  background: ${props => props.theme.brandGradient};
+  background-size: 800% 800%;
+  animation: ${bgAnimation} 30s ease infinite;
+
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 `;
 
 const Box = styled.div`

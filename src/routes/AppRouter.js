@@ -1,22 +1,19 @@
 import React from 'react';
 import {
-  Router, Route, Switch,
+  HashRouter, Route, Switch,
 } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory';
 import Home from '../components/Home';
 import BackGround from '../background/Background';
 import NotFoundPage from '../components/NotFoundPage';
 
-const history = createHistory();
-
 const AppRouter = () => (
-  <Router history={history}>
+  <HashRouter basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route exact path="/" component={BackGround} />
-      <Route path="/home" component={Home} />
+      <Route exact path="/home" component={Home} />
       <Route component={NotFoundPage} />
     </Switch>
-  </Router>
+  </HashRouter>
 );
 
 export default AppRouter;
