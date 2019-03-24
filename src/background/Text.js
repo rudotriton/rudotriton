@@ -45,20 +45,19 @@ const Wrapper = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const TitleWrap = styled.div`
+const LastNameWrap = styled.div`
   animation: ${FadeIn} 2s linear;
 `;
 
-const Title = styled.h1`
+const LastName = styled.span`
   font-size: ${props => props.theme.fontLarge};
   font-family: ${props => props.theme.fontBoldItalic}, sans-serif;
   font-style: italic;
-  background: ${props => props.theme.darkPink};
   background: ${props => props.theme.reflectiveChrome};
   -webkit-background-clip: text;
   letter-spacing: -1px;
   color: transparent;
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 1px white;
   ${props => media.phone`font-size: ${props.theme.fontMedium};`}
 
   &::after {
@@ -94,7 +93,7 @@ const SlideAppear = keyframes`
   }
 `;
 
-const SubTitleWrap = styled.div`
+const FirstNameWrap = styled.div`
   padding: 30px 75px;
   left: 10%;
   bottom: 35%;
@@ -110,10 +109,9 @@ const SubTitleWrap = styled.div`
   ${media.phone`left: 3%; bottom: 30%;`}
 `;
 
-const SubTitle = styled.h2`
+const FirstName = styled.span`
   font-size: ${props => props.theme.fontLarge};
   font-family: ${props => props.theme.fontCursive};
-  font-weight: bold;
   color: ${props => props.theme.white};
   animation: ${props => Flicker(props.theme.cyan)} 1.5s 6s infinite alternate;
   ${props => media.phone`font-size: ${props.theme.fontMedium};`}
@@ -143,12 +141,12 @@ const StyledLink = styled(Link)`
 const Text = () => (
   <>
     <Wrapper>
-      <SubTitleWrap>
-        <SubTitle>Raigo</SubTitle>
-      </SubTitleWrap>
-      <TitleWrap>
-        <Title>JERVA</Title>
-      </TitleWrap>
+      <FirstNameWrap>
+        <FirstName>Raigo</FirstName>
+      </FirstNameWrap>
+      <LastNameWrap>
+        <LastName>JERVA</LastName>
+      </LastNameWrap>
     </Wrapper>
     <StyledLink to="/home">
       <Typed
