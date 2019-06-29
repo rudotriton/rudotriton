@@ -29,20 +29,7 @@ const Wrapper = styled.div`
   background: ${props => props.theme.brandGradient};
   background-size: 800% 800%;
   animation: ${bgAnimation} 30s ease infinite;
-
-  @keyframes AnimationName {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+  will-change: transform;
 `;
 
 const Box = styled.div`

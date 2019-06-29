@@ -12,6 +12,7 @@ const StyledLine = styled.line`
   stroke-width: 1;
   animation: 4s ${MoveToBottom} infinite cubic-bezier(1, 0.06, 0.78, 0);
   animation-delay: ${props => props.delay / 4}s;
+  will-change: transform;
 `;
 
 export default function HorizontalLine({

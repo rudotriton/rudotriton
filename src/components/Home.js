@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import Github from '../icons/Github';
+import Github from 'icons/Github';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -13,6 +12,25 @@ const Wrapper = styled.div`
   color: ${props => props.theme.white};
   font-family: ${props => props.theme.fontMonospace};
   padding: 50px;
+  position: absolute;
+  top: 0;
+  transition: all 1000ms linear;
+
+  &.slide-up-enter {
+    transform: translateY(100%);
+  }
+
+  &.slide-up-enter-active {
+    transform: translateY(0);
+  }
+
+  &.slide-up-exit {
+    transform: translateY(0);
+  }
+
+  &.slide-up-exit-active {
+    transform: translateY(100%);
+  }
 `;
 
 const Box = styled.div`
@@ -35,9 +53,14 @@ const Box = styled.div`
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.button`
   color: ${props => props.theme.white};
+  background: ${props => props.theme.black};
+  outline: none;
+  border: none;
   margin-top: 5rem;
+  cursor: pointer;
+  font-family: ${props => props.theme.fontMonospace};
   font-size: ${props => props.theme.fontTiny};
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -48,13 +71,18 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Home = () => (
+const Home = ({ switchHome }) => (
   <Wrapper>
     <Box>
       Hi, my name is Raigo and I am learning to become a web developer and a designer.
     </Box>
     <Github />
-    <StyledLink to="/">Back to animation</StyledLink>
+    <StyledLink
+      type="button"
+      onClick={switchHome}
+    >
+    Back to animation
+    </StyledLink>
   </Wrapper>
 );
 

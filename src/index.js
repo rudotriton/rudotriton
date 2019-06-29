@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
+import App from 'App';
 import { GlobalStyle, theme } from './style';
 import * as serviceWorker from './serviceWorker';
-import AppRouter from './routes/AppRouter';
 
 const jsx = (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
-      <AppRouter />
+      <App />
     </>
   </ThemeProvider>
 );

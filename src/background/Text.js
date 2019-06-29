@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Typed from 'react-typed';
+import PropTypes from 'prop-types';
 import media from '../util/mediaQueries';
 
 const Flicker = color => keyframes`
@@ -106,6 +107,7 @@ const FirstNameWrap = styled.div`
       0 100%
     );
   animation: ${SlideAppear} 4s 2s linear forwards;
+  will-change: transform;
   ${media.phone`left: 3%; bottom: 30%;`}
 `;
 
@@ -114,14 +116,18 @@ const FirstName = styled.span`
   font-family: ${props => props.theme.fontCursive};
   color: ${props => props.theme.white};
   animation: ${props => Flicker(props.theme.cyan)} 1.5s 6s infinite alternate;
+  will-change: transform;
   ${props => media.phone`font-size: ${props.theme.fontMedium};`}
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.button`
   font-size: ${props => props.theme.fontSmall};
   font-family: ${props => props.theme.fontMonospace};
   color: white;
   position: absolute;
+  border: none;
+  outline: none;
+  cursor: pointer;
   top: 90vh;
   left: 50vw;
   transform: translate(-50%, -50%);
@@ -138,7 +144,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Text = () => (
+const Text = ({ switchHome }) => (
   <>
     <Wrapper>
       <FirstNameWrap>
@@ -148,7 +154,10 @@ const Text = () => (
         <LastName>JERVA</LastName>
       </LastNameWrap>
     </Wrapper>
-    <StyledLink to="/home">
+    <StyledLink
+      type="button"
+      onClick={switchHome}
+    >
       <Typed
         strings={['Continue', 'Proceed', 'Carry On', 'Advance', 'Go On']}
         typeSpeed={100}
@@ -159,5 +168,9 @@ const Text = () => (
     </StyledLink>
   </>
 );
+
+Text.propTypes = {
+  switchHome: PropTypes.func.isRequired,
+};
 
 export default Text;

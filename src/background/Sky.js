@@ -26,6 +26,7 @@ const BackDrop = styled.div`
   background: ${props => props.theme.darkPink};
   background: radial-gradient(circle, ${props => props.theme.darkPink} 0%, ${props => props.theme.darkPurple} 40%, ${props => props.theme.black} 100%);
   animation: 10s ${Pulse} linear infinite;
+  will-change: transform;
 `;
 
 // Mist in front of Sun and Mountains
@@ -43,7 +44,7 @@ const Mist = styled.div`
 export default class Sky extends React.Component {
   generateStars = () => {
     const stars = [];
-    for (let i = 0; i < 80; i += 1) {
+    for (let i = 0; i < 50; i += 1) {
       stars.push(
         <Star
           key={i}
@@ -63,7 +64,7 @@ export default class Sky extends React.Component {
       <Wrapper>
         <BackDrop />
         {
-          this.generateStars()
+          // this.generateStars()
         }
         <Sun />
         <Mountains />

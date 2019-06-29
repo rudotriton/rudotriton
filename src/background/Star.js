@@ -17,6 +17,7 @@ const StarWrapper = styled.div`
   background-color: rgba(255, 255, 255, ${props => props.opacity});
   animation: ${props => props.speed}s ${Blink} infinite cubic-bezier(1, 0.06, 0.78, 0);
   animation-delay: ${props => props.delay / 10}s;
+  will-change: transform;
 `;
 
 export default props => (

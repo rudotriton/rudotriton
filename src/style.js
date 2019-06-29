@@ -12,7 +12,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme.black};
+    background: ${props => props.theme.black};
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
   }
 
   * {

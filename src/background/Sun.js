@@ -43,6 +43,7 @@ const Scanner = styled.div`
       );
     background-size: 100% 4px;
     animation: ${Scan} 2s steps(60) infinite;
+    will-change: transform;
   }
 `;
 
