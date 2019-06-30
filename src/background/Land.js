@@ -40,8 +40,8 @@ const Line = styled.line`
   stroke-width: 1;
 `;
 
-export default class Land extends React.Component {
-  generateVerticals = () => {
+const Land = () => {
+  const generateVerticals = () => {
     const verticals = [];
 
     for (let i = -30; i <= 30; i += 1) {
@@ -56,9 +56,9 @@ export default class Land extends React.Component {
       );
     }
     return verticals;
-  }
+  };
 
-  generateHorizontals = () => {
+  const generateHorizontals = () => {
     const horizontals = [];
 
     for (let i = 1; i <= 16; i += 1) {
@@ -75,21 +75,21 @@ export default class Land extends React.Component {
     }
 
     return horizontals;
-  }
+  };
 
-  render() {
-    return (
-      <Wrapper>
-        <Mist />
-        <SVG>
-          {
-            this.generateVerticals()
-          }
-          {
-            this.generateHorizontals()
-          }
-        </SVG>
-      </Wrapper>
-    );
-  }
-}
+  return (
+    <Wrapper>
+      <Mist />
+      <SVG>
+        {
+          generateVerticals()
+        }
+        {
+          generateHorizontals()
+        }
+      </SVG>
+    </Wrapper>
+  );
+};
+
+export default Land;
