@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   position: absolute;
   transform: translateY(0);
-  transition: all 1000ms linear;
+  transition: transform 1000ms linear;
 
   &.slide-down-enter {
     transform: translateY(-100%);

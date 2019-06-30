@@ -44,6 +44,7 @@ const Wrapper = styled.div`
   top: 30vh;
   left: 50vw;
   transform: translate(-50%, -50%);
+  z-index: 1000;
 `;
 
 const LastNameWrap = styled.div`

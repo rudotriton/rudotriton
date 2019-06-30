@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import Star from './Star';
-import Sun from './Sun';
-import Mountains from './Mountains';
+import Star from 'background/BlinkingStar';
+import Sun from 'background/Sun';
+import Mountains from 'background/Mountains';
 
 const Pulse = keyframes`
   0% { transform: scale(1, 1); }
@@ -41,35 +41,14 @@ const Mist = styled.div`
   box-shadow: 0 0 200px 20px ${props => props.theme.pink};
 `;
 
-export default class Sky extends React.Component {
-  generateStars = () => {
-    const stars = [];
-    for (let i = 0; i < 50; i += 1) {
-      stars.push(
-        <Star
-          key={i}
-          delay={i}
-          speed={Math.floor(Math.random() * 5 + 4)}
-          opacity={Math.random()}
-          x={`${Math.floor(Math.random() * 100 + 1)}vw`}
-          y={`${Math.floor(Math.random() * 60 + 1)}vh`}
-        />,
-      );
-    }
-    return stars;
-  }
+const Sky = () => (
+  <Wrapper>
+    <BackDrop />
+    <Star />
+    <Sun />
+    <Mountains />
+    <Mist />
+  </Wrapper>
+);
 
-  render() {
-    return (
-      <Wrapper>
-        <BackDrop />
-        {
-          // this.generateStars()
-        }
-        <Sun />
-        <Mountains />
-        <Mist />
-      </Wrapper>
-    );
-  }
-}
+export default Sky;

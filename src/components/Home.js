@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   padding: 50px;
   position: absolute;
   top: 0;
-  transition: all 1000ms linear;
+  transition: transform 1000ms linear;
 
   &.slide-up-enter {
     transform: translateY(100%);

@@ -1,25 +1,34 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
-const Blink = ({ opacity }) => keyframes`
-  0% { background-color: rgba(255, 255, 255, ${opacity}); }
-  50% { background-color: transparent; }
-  100% { background-color: rgba(255, 255, 255, ${opacity}); }
+const Blink = () => keyframes`
+  0% { transform: translate(-50%, -50%) scale(0) }
+  50% { transform: translate(-50%, -50%) scale(0.5) }
+  100% { transform: translate(-50%, -50%) scale(0) }
 `;
 
-const StarWrapper = styled.div`
-  width: 2px;
-  height: 2px;
+const Svg = styled.svg`
+  animation: 3s ${Blink} infinite ease-in-out;
   position: absolute;
-  border-radius: 50%;
-  top: ${props => props.y};
-  left: ${props => props.x};
-  background-color: rgba(255, 255, 255, ${props => props.opacity});
-  animation: ${props => props.speed}s ${Blink} infinite cubic-bezier(1, 0.06, 0.78, 0);
-  animation-delay: ${props => props.delay / 10}s;
-  will-change: transform;
+  height: 100px;
+  width: 100px;
+  left: ${props => props.x}vw;
+  top: ${props => props.y}vh;
+  transform: translate(-50%, -50%);
+  fill: white;
+  z-index: -4;
 `;
 
-export default props => (
-  <StarWrapper {...props} />
+const Star = ({ x, y }) => (
+  <Svg x={x} y={y} viewBox="0 0 100 100">
+    <path d="M50,0 C50,37 63,50 100,50 C63,50 50,63 50,100 C50,63 37,50 0,50 C37,50 50,37 50,0 Z" />
+  </Svg>
 );
+
+Star.propTypes = {
+  x: PropTypes.number.isRequired,
+  y: PropTypes.number.isRequired,
+};
+
+export default Star;
