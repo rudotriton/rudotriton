@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
 const Blink = () => keyframes`
-  0% { transform: translate(-50%, -50%) scale(0) }
-  50% { transform: translate(-50%, -50%) scale(0.5) }
-  100% { transform: translate(-50%, -50%) scale(0) }
+  0% { transform: translate(-50%, -50%) scale(0); }
+  50% { transform: translate(-50%, -50%) scale(0.3); }
+  100% { transform: translate(-50%, -50%) scale(0); }
 `;
 
 const Svg = styled.svg`

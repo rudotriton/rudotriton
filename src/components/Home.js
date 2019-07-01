@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Github from 'icons/Github';
 
@@ -85,5 +86,9 @@ const Home = ({ switchHome }) => (
     </StyledLink>
   </Wrapper>
 );
+
+Home.propTypes = {
+  switchHome: PropTypes.func.isRequired,
+};
 
 export default Home;
