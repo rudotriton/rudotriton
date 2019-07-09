@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import useInterval from 'hooks/useInterval';
 import Star from 'background/Star';
 
 const FlyUp = keyframes`
@@ -9,15 +8,15 @@ const FlyUp = keyframes`
     opacity: 0;
   }
 
-  20% {
+  10% {
     transform: translateY(0);
   }
 
-  50% {
+  25% {
     opacity: 1;
   }
 
-  100% {
+  50% {
     transform: translateY(-300px);
     opacity: 0;
   }
@@ -29,15 +28,15 @@ const FlyRight = keyframes`
     opacity: 0;
   }
 
-  20% {
+  10% {
     transform: translateX(0);
   }
 
-  50% {
+  25% {
     opacity: 1;
   }
 
-  100% {
+  50% {
     transform: translateX(300px);
     opacity: 0;
   }
@@ -49,15 +48,15 @@ const FlyDown = keyframes`
     opacity: 0;
   }
 
-  20% {
+  10% {
     transform: translateY(0);
   }
 
-  50% {
+  25% {
     opacity: 1;
   }
 
-  100% {
+  50% {
     transform: translateY(300px);
     opacity: 0;
   }
@@ -69,15 +68,15 @@ const FlyLeft = keyframes`
     opacity: 0;
   }
 
-  20% {
+  10% {
     transform: translateX(0);
   }
 
-  50% {
+  25% {
     opacity: 1;
   }
 
-  100% {
+  50% {
     transform: translateX(-300px);
     opacity: 0;
   }
@@ -90,9 +89,10 @@ const Top = styled.div`
   width: 2px;
   height: 5px;
   background: white;
+  opacity: 0;
   top: calc(${props => props.y}vh - 5px);
   left: calc(${props => props.x}vw - 1px);
-  animation: 3s ${props => props.animation} infinite ${cubicBez};
+  animation: 6s ${props => props.animation} 6s infinite ${cubicBez};
 `;
 
 const Bottom = styled.div`
@@ -100,9 +100,10 @@ const Bottom = styled.div`
   width: 2px;
   height: 5px;
   background: white;
+  opacity: 0;
   top: calc(${props => props.y}vh + 2px);
   left: calc(${props => props.x}vw - 1px);
-  animation: 3s ${props => props.animation} infinite ${cubicBez};
+  animation: 6s ${props => props.animation} 6s infinite ${cubicBez};
 `;
 
 const Left = styled.div`
@@ -110,9 +111,10 @@ const Left = styled.div`
   width: 5px;
   height: 2px;
   background: white;
+  opacity: 0;
   top: calc(${props => props.y}vh - 1px);
   left: calc(${props => props.x}vw - 5px);
-  animation: 3s ${props => props.animation} infinite ${cubicBez};
+  animation: 6s ${props => props.animation} 6s infinite ${cubicBez};
 `;
 
 const Right = styled.div`
@@ -120,21 +122,15 @@ const Right = styled.div`
   width: 5px;
   height: 2px;
   background: white;
+  opacity: 0;
   top: calc(${props => props.y}vh - 1px);
   left: calc(${props => props.x}vw + 2px);
-  animation: 3s ${props => props.animation} infinite ${cubicBez};
+  animation: 6s ${props => props.animation} 6s infinite ${cubicBez};
 `;
 
 const BlinkingStar = () => {
-  const [x, setX] = useState(80);
-  const [y, setY] = useState(20);
-  const changePosition = () => {
-    setX(Math.floor(Math.random() * 81) + 10);
-    setY(Math.floor(Math.random() * 25) + 10);
-  };
-  useInterval(() => {
-    changePosition();
-  }, 3000);
+  const [x] = useState(80);
+  const [y] = useState(20);
 
   return (
     <>

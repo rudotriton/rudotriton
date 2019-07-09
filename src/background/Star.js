@@ -4,18 +4,18 @@ import styled, { keyframes } from 'styled-components';
 
 const Blink = () => keyframes`
   0% { transform: translate(-50%, -50%) scale(0); }
-  50% { transform: translate(-50%, -50%) scale(0.3); }
-  100% { transform: translate(-50%, -50%) scale(0); }
+  25% { transform: translate(-50%, -50%) scale(0.3); }
+  50% { transform: translate(-50%, -50%) scale(0); }
 `;
 
 const Svg = styled.svg`
-  animation: 3s ${Blink} infinite ease-in-out;
+  animation: 6s ${Blink} 6s infinite ease-in-out;
   position: absolute;
   height: 100px;
   width: 100px;
   left: ${props => props.x}vw;
   top: ${props => props.y}vh;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   fill: white;
   z-index: -4;
 `;
