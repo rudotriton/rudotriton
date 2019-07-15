@@ -20,11 +20,8 @@ jobs:
     - stage: test
       script:
         - npx eslint ./src
+        - npm run build
     - stage: deploy
-      script:
-        - npm run clean
-        - npm run predeploy
-        - npm run deploy
       deploy:
         provider: pages
         skip_cleanup: true
