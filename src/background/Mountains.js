@@ -1,20 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-
-const Flicker = keyframes`
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-`;
-
-const CubicBez = (param) => {
-  if (param === '1') {
-    return 'cubic-bezier(0.89,-0.19, 0, 1.68)';
-  } if (param === '2') {
-    return 'cubic-bezier(0.06, 1.36, 0.98,-0.47)';
-  }
-  return 'cubic-bezier(0.18, 1.09, 0.29, 0.43)';
-};
+import styled from 'styled-components';
 
 const LeftMountain = styled.div`
   position: absolute;
@@ -23,14 +8,6 @@ const LeftMountain = styled.div`
   z-index: ${props => props.zindex};
   top: 60vh;
   background: ${props => props.theme.black};
-  background:
-    linear-gradient(
-      0deg,
-      ${props => (props.color === '1' ? props.theme.glitch1 : props.color === '2' ? props.theme.glitch2 : props.theme.black)}
-      0%,
-      ${props => (props.color === '1' ? props.theme.glitch1 : props.color === '2' ? props.theme.glitch2 : props.theme.darkestPurple)}
-      100%
-    );
   clip-path:
     polygon(
       0 0%,
@@ -66,12 +43,6 @@ const LeftMountain = styled.div`
       100% 100%,
       0 100%
     );
-
-  /* animation:
-    ${props => (props.color === '2' ? '0.2s' : '0.1s')}
-    ${Flicker}
-    ${props => CubicBez(props.color)}
-    infinite; */
 `;
 
 const RightMountain = styled.div`
@@ -82,14 +53,6 @@ const RightMountain = styled.div`
   top: 60vh;
   right: 0;
   background: ${props => props.theme.black};
-  background:
-    linear-gradient(
-      0deg,
-      ${props => (props.color === '1' ? props.theme.glitch1 : props.color === '2' ? props.theme.glitch2 : props.theme.black)}
-      0%,
-      ${props => (props.color === '1' ? props.theme.glitch1 : props.color === '2' ? props.theme.glitch2 : props.theme.darkestPurple)}
-      100%
-    );
   clip-path:
     polygon(
       0% 100%,
@@ -126,33 +89,12 @@ const RightMountain = styled.div`
       100% 100%
     );
 
-  /* animation:
-    ${props => (props.color === '2' ? '0.1s' : '0.2s')}
-    ${Flicker}
-    ${props => CubicBez(props.color)}
-    infinite; */
 `;
 
 const Mountains = () => (
   <>
     <LeftMountain zindex="10" />
-    {/* <LeftMountain
-      color="1"
-      zindex="9"
-    />
-    <LeftMountain
-      color="2"
-      zindex="9"
-    /> */}
     <RightMountain zindex="10" />
-    {/* <RightMountain
-      color="1"
-      zindex="9"
-    />
-    <RightMountain
-      color="2"
-      zindex="9"
-    /> */}
   </>
 );
 
