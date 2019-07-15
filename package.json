@@ -19,7 +19,8 @@
     "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --passWithNoTests"
+    "test": "react-scripts test --passWithNoTests",
+    "clean": "rm -rf build"
   },
   "eslintConfig": {
     "extends": "react-app"
