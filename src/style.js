@@ -4,7 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 62.5%;
-    font-family: ${props => props.theme.font};
+    font-family: ${(props) => props.theme.font};
   }
 
   ::-webkit-scrollbar {
@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${props => props.theme.black};
+    background: ${(props) => props.theme.black};
     width: 100vw;
     height: 100vh;
     overflow: hidden;

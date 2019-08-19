@@ -90,9 +90,9 @@ const Top = styled.div`
   height: 5px;
   background: white;
   opacity: 0;
-  top: calc(${props => props.y}vh - 5px);
-  left: calc(${props => props.x}vw - 1px);
-  animation: 6s ${props => props.animation} 6s infinite ${cubicBez};
+  top: calc(${(props) => props.y}vh - 5px);
+  left: calc(${(props) => props.x}vw - 1px);
+  animation: 6s ${(props) => props.animation} 6s infinite ${cubicBez};
 `;
 
 const Bottom = styled.div`
@@ -101,9 +101,9 @@ const Bottom = styled.div`
   height: 5px;
   background: white;
   opacity: 0;
-  top: calc(${props => props.y}vh + 2px);
-  left: calc(${props => props.x}vw - 1px);
-  animation: 6s ${props => props.animation} 6s infinite ${cubicBez};
+  top: calc(${(props) => props.y}vh + 2px);
+  left: calc(${(props) => props.x}vw - 1px);
+  animation: 6s ${(props) => props.animation} 6s infinite ${cubicBez};
 `;
 
 const Left = styled.div`
@@ -112,9 +112,9 @@ const Left = styled.div`
   height: 2px;
   background: white;
   opacity: 0;
-  top: calc(${props => props.y}vh - 1px);
-  left: calc(${props => props.x}vw - 5px);
-  animation: 6s ${props => props.animation} 6s infinite ${cubicBez};
+  top: calc(${(props) => props.y}vh - 1px);
+  left: calc(${(props) => props.x}vw - 5px);
+  animation: 6s ${(props) => props.animation} 6s infinite ${cubicBez};
 `;
 
 const Right = styled.div`
@@ -123,9 +123,9 @@ const Right = styled.div`
   height: 2px;
   background: white;
   opacity: 0;
-  top: calc(${props => props.y}vh - 1px);
-  left: calc(${props => props.x}vw + 2px);
-  animation: 6s ${props => props.animation} 6s infinite ${cubicBez};
+  top: calc(${(props) => props.y}vh - 1px);
+  left: calc(${(props) => props.x}vw + 2px);
+  animation: 6s ${(props) => props.animation} 6s infinite ${cubicBez};
 `;
 
 const BlinkingStar = () => {

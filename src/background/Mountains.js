@@ -5,9 +5,9 @@ const LeftMountain = styled.div`
   position: absolute;
   width: 48vw;
   height: 10vh;
-  z-index: ${props => props.zindex};
+  z-index: ${(props) => props.zindex};
   top: 60vh;
-  background: ${props => props.theme.black};
+  background: ${(props) => props.theme.black};
   clip-path:
     polygon(
       0 0%,
@@ -49,10 +49,10 @@ const RightMountain = styled.div`
   position: absolute;
   width: 48vw;
   height: 10vh;
-  z-index: ${props => props.zindex};
+  z-index: ${(props) => props.zindex};
   top: 60vh;
   right: 0;
-  background: ${props => props.theme.black};
+  background: ${(props) => props.theme.black};
   clip-path:
     polygon(
       0% 100%,

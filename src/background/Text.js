@@ -5,7 +5,7 @@ import Typed from 'react-typed';
 import PropTypes from 'prop-types';
 import media from '../util/mediaQueries';
 
-const Flicker = color => keyframes`
+const Flicker = (color) => keyframes`
   0%,
   19%,
   21%,
@@ -52,15 +52,15 @@ const LastNameWrap = styled.div`
 `;
 
 const LastName = styled.span`
-  font-size: ${props => props.theme.fontLarge};
-  font-family: ${props => props.theme.fontBoldItalic}, sans-serif;
+  font-size: ${(props) => props.theme.fontLarge};
+  font-family: ${(props) => props.theme.fontBoldItalic}, sans-serif;
   font-style: italic;
-  background: ${props => props.theme.reflectiveChrome};
+  background: ${(props) => props.theme.reflectiveChrome};
   -webkit-background-clip: text;
   letter-spacing: -1px;
   color: transparent;
   -webkit-text-stroke: 1px white;
-  ${props => media.phone`font-size: ${props.theme.fontMedium};`}
+  ${(props) => media.phone`font-size: ${props.theme.fontMedium};`}
 
   &::after {
     background: none;
@@ -69,7 +69,7 @@ const LastName = styled.span`
     top: 0;
     z-index: -1;
     position: absolute;
-    text-shadow: 0 0 40px ${props => props.theme.pink};
+    text-shadow: 0 0 40px ${(props) => props.theme.pink};
   }
 `;
 
@@ -113,17 +113,17 @@ const FirstNameWrap = styled.div`
 `;
 
 const FirstName = styled.span`
-  font-size: ${props => props.theme.fontLarge};
-  font-family: ${props => props.theme.fontCursive};
-  color: ${props => props.theme.white};
-  animation: ${props => Flicker(props.theme.cyan)} 1.5s 6s infinite alternate;
+  font-size: ${(props) => props.theme.fontLarge};
+  font-family: ${(props) => props.theme.fontCursive};
+  color: ${(props) => props.theme.white};
+  animation: ${(props) => Flicker(props.theme.cyan)} 1.5s 6s infinite alternate;
   will-change: transform;
-  ${props => media.phone`font-size: ${props.theme.fontMedium};`}
+  ${(props) => media.phone`font-size: ${props.theme.fontMedium};`}
 `;
 
 const StyledLink = styled.button`
-  font-size: ${props => props.theme.fontSmall};
-  font-family: ${props => props.theme.fontMonospace};
+  font-size: ${(props) => props.theme.fontSmall};
+  font-family: ${(props) => props.theme.fontMonospace};
   color: white;
   position: absolute;
   border: none;

@@ -5,13 +5,13 @@ const A = styled.a`
   margin-top: 20px;
   text-align: center;
   text-decoration: none;
-  color: ${props => props.theme.white};
-  font-size: ${props => props.theme.fontTiny};
+  color: ${(props) => props.theme.white};
+  font-size: ${(props) => props.theme.fontTiny};
   border-bottom: 2px solid transparent;
   transition: 0.25s ease;
 
   &:hover {
-    border-bottom: 2px solid ${props => props.theme.white};
+    border-bottom: 2px solid ${(props) => props.theme.white};
   }
 `;
 

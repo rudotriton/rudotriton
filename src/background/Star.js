@@ -13,8 +13,8 @@ const Svg = styled.svg`
   position: absolute;
   height: 100px;
   width: 100px;
-  left: ${props => props.x}vw;
-  top: ${props => props.y}vh;
+  left: ${(props) => props.x}vw;
+  top: ${(props) => props.y}vh;
   transform: translate(-50%, -50%) scale(0);
   fill: white;
   z-index: -4;
