@@ -10,8 +10,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${props => props.theme.white};
-  font-family: ${props => props.theme.fontMonospace};
+  color: ${(props) => props.theme.white};
+  font-family: ${(props) => props.theme.fontMonospace};
   padding: 50px;
   position: absolute;
   top: 0;
@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 `;
 
 const Box = styled.div`
-  font-size: ${props => props.theme.fontSmall};
+  font-size: ${(props) => props.theme.fontSmall};
   position: relative;
   padding: 5rem;
   box-sizing: border-box;
@@ -50,25 +50,25 @@ const Box = styled.div`
     left: 0;
     z-index: -1;
     margin: -5px;
-    background: ${props => props.theme.brandGradient};
+    background: ${(props) => props.theme.brandGradient};
   }
 `;
 
 const StyledLink = styled.button`
-  color: ${props => props.theme.white};
-  background: ${props => props.theme.black};
+  color: ${(props) => props.theme.white};
+  background: ${(props) => props.theme.black};
   outline: none;
   border: none;
   margin-top: 5rem;
   cursor: pointer;
-  font-family: ${props => props.theme.fontMonospace};
-  font-size: ${props => props.theme.fontTiny};
+  font-family: ${(props) => props.theme.fontMonospace};
+  font-size: ${(props) => props.theme.fontTiny};
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: 0.25s ease;
 
   &:hover {
-    border-bottom: 2px solid ${props => props.theme.white};
+    border-bottom: 2px solid ${(props) => props.theme.white};
   }
 `;
 

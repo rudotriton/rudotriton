@@ -23,8 +23,8 @@ const BackDrop = styled.div`
   overflow: hidden;
   position: relative;
   z-index: -5;
-  background: ${props => props.theme.darkPink};
-  background: radial-gradient(circle, ${props => props.theme.darkPink} 0%, ${props => props.theme.darkPurple} 40%, ${props => props.theme.black} 100%);
+  background: ${(props) => props.theme.darkPink};
+  background: radial-gradient(circle, ${(props) => props.theme.darkPink} 0%, ${(props) => props.theme.darkPurple} 40%, ${(props) => props.theme.black} 100%);
   animation: 10s ${Pulse} linear infinite;
   will-change: transform;
 `;
@@ -38,7 +38,7 @@ const Mist = styled.div`
   transform: translate(-50%, -50%);
   top: 65vh;
   left: 50vw;
-  box-shadow: 0 0 200px 20px ${props => props.theme.pink};
+  box-shadow: 0 0 200px 20px ${(props) => props.theme.pink};
 `;
 
 const Sky = () => (

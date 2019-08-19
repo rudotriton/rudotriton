@@ -9,15 +9,15 @@ const Wrapper = styled.div`
   position: absolute;
   top: 70vh;
   overflow: hidden;
-  background: ${props => props.theme.darkBlue};
+  background: ${(props) => props.theme.darkBlue};
   background:
     linear-gradient(
       180deg,
-      ${props => props.theme.darkBlue}
+      ${(props) => props.theme.darkBlue}
       0%,
-      ${props => props.theme.darkPurple}
+      ${(props) => props.theme.darkPurple}
       30%,
-      ${props => props.theme.black}
+      ${(props) => props.theme.black}
       100%
     );
 `;
@@ -26,7 +26,7 @@ const Mist = styled.div`
   width: 100vw;
   height: 20px;
   position: absolute;
-  background-color: ${props => props.theme.cyan};
+  background-color: ${(props) => props.theme.cyan};
   clip-path: polygon(0 0, 100vw 0, 100vw 100%, 50vw 0, 0 100%);
 `;
 
@@ -36,7 +36,7 @@ const SVG = styled.svg`
 `;
 
 const Line = styled.line`
-  stroke: ${props => props.theme.cyan};
+  stroke: ${(props) => props.theme.cyan};
   stroke-width: 1;
 `;
 
