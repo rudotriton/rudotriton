@@ -4,7 +4,6 @@
   "homepage": "https://rudotriton.github.io",
   "private": true,
   "dependencies": {
-    "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -15,12 +14,9 @@
     "styled-components": "^4.3.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "clean": "rm -rf build"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
