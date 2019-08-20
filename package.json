@@ -1,7 +1,7 @@
 {
-  "name": "rudotriton.io",
+  "name": "rudotriton",
   "version": "1.0.0",
-  "homepage": "https://rudotriton.github.io",
+  "homepage": "https://rudotriton.netlify.com",
   "private": true,
   "dependencies": {
     "prop-types": "^15.7.2",
