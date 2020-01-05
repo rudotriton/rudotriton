@@ -82,7 +82,7 @@ const Home = ({ switchHome }) => (
       type="button"
       onClick={switchHome}
     >
-    Back to animation
+      Back to animation
     </StyledLink>
   </Wrapper>
 );
