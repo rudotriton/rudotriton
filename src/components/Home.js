@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Github from 'icons/Github';
+import Signature from 'components/Signature';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -40,6 +41,9 @@ const Box = styled.div`
   padding: 5rem;
   box-sizing: border-box;
   background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
   &::before {
     content: '';
@@ -76,6 +80,7 @@ const Home = ({ switchHome }) => (
   <Wrapper>
     <Box>
       Hi, my name is Raigo and I am learning to become a web developer and a designer.
+      <Signature />
     </Box>
     <Github />
     <StyledLink
