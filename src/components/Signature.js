@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const draw = keyframes`
@@ -9,6 +9,7 @@ const draw = keyframes`
 
 const Wrapper = styled.div`
   margin-top: 3rem;
+  outline:none;
   & > svg {
     height: 10rem;
     width: 20rem;
@@ -19,6 +20,10 @@ const Wrapper = styled.div`
       animation-fill-mode: forwards;
       animation-name: ${draw};
     }
+  }
+  cursor: pointer;
+  &:focus {
+    
   }
 `;
 
