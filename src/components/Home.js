@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Github from 'icons/Github';
 import Signature from 'components/Signature';
+import uuid from 'uuid/v4';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -61,7 +62,6 @@ const Box = styled.div`
 const StyledLink = styled.button`
   color: ${(props) => props.theme.white};
   background: ${(props) => props.theme.black};
-  outline: none;
   border: none;
   margin-top: 5rem;
   cursor: pointer;
@@ -76,21 +76,32 @@ const StyledLink = styled.button`
   }
 `;
 
-const Home = ({ switchHome }) => (
-  <Wrapper>
-    <Box>
-      Hi, my name is Raigo and I am learning to become a web developer and a designer.
-      <Signature />
-    </Box>
-    <Github />
-    <StyledLink
-      type="button"
-      onClick={switchHome}
-    >
-      Back to animation
-    </StyledLink>
-  </Wrapper>
-);
+const Home = ({ switchHome }) => {
+  const [elem, setElems] = useState([<Signature key="1" />]);
+  const toggleClass = () => {
+    setElems([]);
+    setElems(<Signature key={uuid()} />);
+  };
+  return (
+    <Wrapper>
+      <Box>
+        Hi, my name is Raigo and I am learning to become a web developer and a designer.
+        <div tabIndex={0} role="button" onClick={toggleClass} onKeyPress={toggleClass}>
+          {
+        elem
+      }
+        </div>
+      </Box>
+      <Github />
+      <StyledLink
+        type="button"
+        onClick={switchHome}
+      >
+        Back to animation
+      </StyledLink>
+    </Wrapper>
+  );
+};
 
 Home.propTypes = {
   switchHome: PropTypes.func.isRequired,
