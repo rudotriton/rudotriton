@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Github from 'icons/Github';
 import Signature from 'components/Signature';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 
 const Wrapper = styled.div`
   height: 100vh;
