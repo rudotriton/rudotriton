@@ -10,16 +10,12 @@ const Wrapper = styled.div`
   top: 70vh;
   overflow: hidden;
   background: ${(props) => props.theme.darkBlue};
-  background:
-    linear-gradient(
-      180deg,
-      ${(props) => props.theme.darkBlue}
-      0%,
-      ${(props) => props.theme.darkPurple}
-      30%,
-      ${(props) => props.theme.black}
-      100%
-    );
+  background: linear-gradient(
+    180deg,
+    ${(props) => props.theme.darkBlue} 0%,
+    ${(props) => props.theme.darkPurple} 30%,
+    ${(props) => props.theme.black} 100%
+  );
 `;
 
 const Mist = styled.div`
@@ -46,13 +42,7 @@ const Land = () => {
 
     for (let i = -30; i <= 30; i += 1) {
       verticals.push(
-        <Line
-          key={i}
-          x1="50%"
-          y1="0"
-          x2={`${i * 1500}`}
-          y2="1000"
-        />,
+        <Line key={i} x1="50%" y1="0" x2={`${i * 1500}`} y2="1000" />
       );
     }
     return verticals;
@@ -63,14 +53,7 @@ const Land = () => {
 
     for (let i = 1; i <= 16; i += 1) {
       horizontals.push(
-        <HorizontalLine
-          key={i}
-          x1="0%"
-          y1="0%"
-          x2="100%"
-          y2="0%"
-          delay={i}
-        />,
+        <HorizontalLine key={i} x1="0%" y1="0%" x2="100%" y2="0%" delay={i} />
       );
     }
 
@@ -81,12 +64,8 @@ const Land = () => {
     <Wrapper>
       <Mist />
       <SVG>
-        {
-          generateVerticals()
-        }
-        {
-          generateHorizontals()
-        }
+        {generateVerticals()}
+        {generateHorizontals()}
       </SVG>
     </Wrapper>
   );

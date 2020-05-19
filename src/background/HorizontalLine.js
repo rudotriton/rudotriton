@@ -15,18 +15,8 @@ const StyledLine = styled.line`
   will-change: transform;
 `;
 
-export default function HorizontalLine({
-  x1, x2, y1, y2, delay,
-}) {
-  return (
-    <StyledLine
-      x1={x1}
-      y1={y1}
-      x2={x2}
-      y2={y2}
-      delay={delay}
-    />
-  );
+export default function HorizontalLine({ x1, x2, y1, y2, delay }) {
+  return <StyledLine x1={x1} y1={y1} x2={x2} y2={y2} delay={delay} />;
 }
 
 HorizontalLine.propTypes = {

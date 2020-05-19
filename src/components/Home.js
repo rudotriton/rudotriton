@@ -85,18 +85,19 @@ const Home = ({ switchHome }) => {
   return (
     <Wrapper>
       <Box>
-        Hi, my name is Raigo and I am learning to become a web developer and a designer.
-        <div tabIndex={0} role="button" onClick={toggleClass} onKeyPress={toggleClass}>
-          {
-        elem
-      }
+        Hi, my name is Raigo and I am learning to become a web developer and a
+        designer.
+        <div
+          tabIndex={0}
+          role="button"
+          onClick={toggleClass}
+          onKeyPress={toggleClass}
+        >
+          {elem}
         </div>
       </Box>
       <Github />
-      <StyledLink
-        type="button"
-        onClick={switchHome}
-      >
+      <StyledLink type="button" onClick={switchHome}>
         Back to animation
       </StyledLink>
     </Wrapper>

@@ -35,12 +35,11 @@ const Scanner = styled.div`
     bottom: 0;
     left: 0;
     z-index: 500;
-    background:
-      linear-gradient(
-        to bottom,
-        transparent 50%,
-        ${(props) => props.theme.darkPurple} 51%
-      );
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      ${(props) => props.theme.darkPurple} 51%
+    );
     background-size: 100% 4px;
     animation: ${Scan} 2s steps(60) infinite;
     will-change: transform;
@@ -57,7 +56,12 @@ const Sun = styled.div`
   left: 50vw;
   transform: translate(-50%, -50%);
   background: ${(props) => props.theme.yellow};
-  background: linear-gradient(180deg, ${(props) => props.theme.yellow} 0%, ${(props) => props.theme.red} 36%, ${(props) => props.theme.purple} 77%);
+  background: linear-gradient(
+    180deg,
+    ${(props) => props.theme.yellow} 0%,
+    ${(props) => props.theme.red} 36%,
+    ${(props) => props.theme.purple} 77%
+  );
 `;
 
 export default () => (

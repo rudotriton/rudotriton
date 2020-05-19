@@ -100,13 +100,7 @@ const FirstNameWrap = styled.div`
   left: 10%;
   bottom: 35%;
   position: absolute;
-  clip-path:
-    polygon(
-      0 0,
-      0 0,
-      0 100%,
-      0 100%
-    );
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   animation: ${SlideAppear} 4s 2s linear forwards;
   will-change: transform;
   ${media.phone`left: 3%; bottom: 30%;`}
@@ -155,10 +149,7 @@ const Text = ({ switchHome }) => (
         <LastName>JERVA</LastName>
       </LastNameWrap>
     </Wrapper>
-    <StyledLink
-      type="button"
-      onClick={switchHome}
-    >
+    <StyledLink type="button" onClick={switchHome}>
       <Typed
         strings={['Continue', 'Proceed', 'Carry On', 'Advance', 'Go On']}
         typeSpeed={100}
