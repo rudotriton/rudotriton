@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Github from 'icons/Github';
 import Signature from 'components/Signature';
-import { v4 as uuid } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -80,7 +80,7 @@ const Home = ({ switchHome }) => {
   const [elem, setElems] = useState([<Signature key="1" />]);
   const toggleClass = () => {
     setElems([]);
-    setElems(<Signature key={uuid()} />);
+    setElems(<Signature key={uuidv4()} />);
   };
   return (
     <Wrapper>
