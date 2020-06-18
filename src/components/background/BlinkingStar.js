@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import Star from 'background/Star';
+import Star from 'components/background/Star';
 
 const FlyUp = keyframes`
   0% {

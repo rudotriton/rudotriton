@@ -51,9 +51,9 @@ export const theme = {
   textBoxGradient:
     'linear-gradient(159deg, rgba(70, 160, 249, 1) 0%, rgba(184,5,246,1) 50%, rgba(255,0,130,1) 100%)',
   brandGradient: 'linear-gradient(270deg, #5e00bc, #ff4c93, #ff567f, #ff6363);',
-  fontCursive: 'Mr De Haviland',
-  fontBoldItalic: 'Chakra Petch',
-  fontMonospace: 'Share Tech Mono',
+  fontCursive: 'Mr De Haviland, cursive',
+  fontBoldItalic: 'Chakra Petch, sans-serif',
+  fontMonospace: 'Share Tech Mono, monospace',
   fontLarge: '15rem',
   fontMedium: '10rem',
   fontSmall: '2.5rem',

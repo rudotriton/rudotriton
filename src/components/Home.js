@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Github from 'icons/Github';
 import Signature from 'components/Signature';
+import StyledLink from 'components/StyledLink';
 import { v4 as uuidv4 } from 'uuid';
 
 const Wrapper = styled.div`
@@ -14,69 +14,34 @@ const Wrapper = styled.div`
   align-items: center;
   color: ${(props) => props.theme.white};
   font-family: ${(props) => props.theme.fontMonospace};
-  padding: 50px;
-  position: absolute;
-  top: 0;
-  transition: transform 1000ms linear;
-
-  &.slide-up-enter {
-    transform: translateY(100%);
-  }
-
-  &.slide-up-enter-active {
-    transform: translateY(0);
-  }
-
-  &.slide-up-exit {
-    transform: translateY(0);
-  }
-
-  &.slide-up-exit-active {
-    transform: translateY(100%);
-  }
+  padding: 5rem;
 `;
 
 const Box = styled.div`
-  font-size: ${(props) => props.theme.fontSmall};
-  position: relative;
-  padding: 5rem;
-  box-sizing: border-box;
+  align-items: flex-end;
   background: #000;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  font-size: ${(props) => props.theme.fontSmall};
+  margin: 5px;
+  padding: 5rem;
+  position: relative;
 
   &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -5px;
     background: ${(props) => props.theme.brandGradient};
+    bottom: 0;
+    content: '';
+    left: 0;
+    margin: -5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
   }
 `;
 
-const StyledLink = styled.button`
-  color: ${(props) => props.theme.white};
-  background: ${(props) => props.theme.black};
-  border: none;
-  margin-top: 5rem;
-  cursor: pointer;
-  font-family: ${(props) => props.theme.fontMonospace};
-  font-size: ${(props) => props.theme.fontTiny};
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: 0.25s ease;
-
-  &:hover {
-    border-bottom: 2px solid ${(props) => props.theme.white};
-  }
-`;
-
-const Home = ({ switchHome }) => {
+const Home = () => {
   const [elem, setElems] = useState([<Signature key="1" />]);
   const toggleClass = () => {
     setElems([]);
@@ -97,15 +62,11 @@ const Home = ({ switchHome }) => {
         </div>
       </Box>
       <Github />
-      <StyledLink type="button" onClick={switchHome}>
-        Back to animation
-      </StyledLink>
+      <StyledLink destination="/">Back to animation</StyledLink>
     </Wrapper>
   );
 };
 
-Home.propTypes = {
-  switchHome: PropTypes.func.isRequired,
-};
+Home.propTypes = {};
 
 export default Home;

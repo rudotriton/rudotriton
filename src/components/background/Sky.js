@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import Star from 'background/BlinkingStar';
-import Sun from 'background/Sun';
-import Mountains from 'background/Mountains';
+import Star from 'components/background/BlinkingStar';
+import Sun from 'components/background/Sun';
+import Mountains from 'components/background/Mountains';
 
 const Pulse = keyframes`
   0% { transform: scale(1, 1); }

@@ -1,9 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-// import { Link } from 'react-router-dom';
-import Typed from 'react-typed';
-import PropTypes from 'prop-types';
-import media from '../util/mediaQueries';
+import media from 'util/mediaQueries';
 
 const Flicker = (color) => keyframes`
   0%,
@@ -115,54 +112,17 @@ const FirstName = styled.span`
   ${(props) => media.phone`font-size: ${props.theme.fontMedium};`}
 `;
 
-const StyledLink = styled.button`
-  font-size: ${(props) => props.theme.fontSmall};
-  font-family: ${(props) => props.theme.fontMonospace};
-  color: white;
-  position: absolute;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  top: 90vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-  text-decoration: none;
-  transition: 0.25s ease;
-  z-index: 50;
-  background-color: black;
-  border-bottom: 2px solid transparent;
-  padding: 5px 5px 5px 10px;
-  ${media.phone`top: 80vh;`}
-
-  &:hover {
-    border-bottom: 2px solid white;
-  }
-`;
-
-const Text = ({ switchHome }) => (
-  <>
-    <Wrapper>
-      <FirstNameWrap>
-        <FirstName>Raigo</FirstName>
-      </FirstNameWrap>
-      <LastNameWrap>
-        <LastName>JERVA</LastName>
-      </LastNameWrap>
-    </Wrapper>
-    <StyledLink type="button" onClick={switchHome}>
-      <Typed
-        strings={['Continue', 'Proceed', 'Carry On', 'Advance', 'Go On']}
-        typeSpeed={100}
-        backSpeed={100}
-        backDelay={8000}
-        loop
-      />
-    </StyledLink>
-  </>
+const Text = () => (
+  <Wrapper>
+    <FirstNameWrap>
+      <FirstName>Raigo</FirstName>
+    </FirstNameWrap>
+    <LastNameWrap>
+      <LastName>JERVA</LastName>
+    </LastNameWrap>
+  </Wrapper>
 );
 
-Text.propTypes = {
-  switchHome: PropTypes.func.isRequired,
-};
+Text.propTypes = {};
 
 export default Text;

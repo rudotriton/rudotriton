@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-
+import StyledLink from 'components/StyledLink';
+import Typed from 'react-typed';
 import Land from './Land';
 import Sky from './Sky';
 import Text from './Text';
@@ -31,16 +31,23 @@ const Wrapper = styled.div`
   }
 `;
 
-const Background = ({ switchHome }) => (
+const Background = () => (
   <Wrapper>
     <Sky />
     <Land />
-    <Text switchHome={switchHome} />
+    <Text />
+    <StyledLink destination="home">
+      <Typed
+        strings={['Continue', 'Proceed', 'Carry On', 'Advance', 'Go On']}
+        typeSpeed={100}
+        backSpeed={100}
+        backDelay={8000}
+        loop
+      />
+    </StyledLink>
   </Wrapper>
 );
 
-Background.propTypes = {
-  switchHome: PropTypes.func.isRequired,
-};
+Background.propTypes = {};
 
 export default Background;

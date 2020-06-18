@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
-import App from 'App';
+import AppRouter from 'router/AppRouter';
 import Favicons from 'components/Favicons';
 import { GlobalStyle, theme } from './style';
 
@@ -10,7 +10,7 @@ const jsx = (
     <>
       <Favicons />
       <GlobalStyle />
-      <App />
+      <AppRouter />
     </>
   </ThemeProvider>
 );
