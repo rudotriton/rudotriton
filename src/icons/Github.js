@@ -9,43 +9,34 @@ const A = styled.a`
   font-size: ${(props) => props.theme.fontTiny};
   transition: 0.25s ease;
   outline: none;
-  border: 1px solid transparent;
-  padding: 0.5rem;
+  padding: 2rem;
 
   p {
     background: black;
     padding: 0.1rem 0.5rem;
   }
 
-  &:hover {
-    filter: drop-shadow(-0.3rem -0.3rem 0.5rem #ff545c)
-            drop-shadow(-0.3rem 0.3rem 0.5rem #bd00ae)
-            drop-shadow(0.3rem -0.3rem 0.5rem #ff3f82)
-            drop-shadow(0.3rem 0.3rem 0.5rem #6b00c3);
-    }
-  }
-  &:hover > svg {
-    fill: ${(p) => p.theme.black};
-  }
+  &:focus,
   &:active {
     filter: drop-shadow(-0.3rem -0.3rem 0.5rem #ff545c)
-            drop-shadow(-0.3rem 0.3rem 0.5rem #bd00ae)
-            drop-shadow(0.3rem -0.3rem 0.5rem #ff3f82)
-            drop-shadow(0.3rem 0.3rem 0.5rem #6b00c3);
-    }
+      drop-shadow(-0.3rem 0.3rem 0.5rem #bd00ae)
+      drop-shadow(0.3rem -0.3rem 0.5rem #ff3f82)
+      drop-shadow(0.3rem 0.3rem 0.5rem #6b00c3);
   }
+  &:focus > svg,
   &:active > svg {
     fill: ${(p) => p.theme.black};
   }
-  &:focus {
-    filter: drop-shadow(-0.4rem -0.4rem 0.5rem #ff545c)
-            drop-shadow(-0.4rem 0.4rem 0.5rem #bd00ae)
-            drop-shadow(0.4rem -0.4rem 0.5rem #ff3f82)
-            drop-shadow(0.4rem 0.4rem 0.5rem #6b00c3);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      filter: drop-shadow(-0.3rem -0.3rem 0.5rem #ff545c)
+        drop-shadow(-0.3rem 0.3rem 0.5rem #bd00ae)
+        drop-shadow(0.3rem -0.3rem 0.5rem #ff3f82)
+        drop-shadow(0.3rem 0.3rem 0.5rem #6b00c3);
     }
-  }
-  &:focus > svg {
-    fill: ${(p) => p.theme.black};
+    &:hover > svg {
+      fill: ${(p) => p.theme.black};
+    }
   }
 `;
 
