@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
 const Blink = () => keyframes`
-  0% { transform: translate(-50%, -50%) scale(0); }
-  25% { transform: translate(-50%, -50%) scale(0.3); }
-  50% { transform: translate(-50%, -50%) scale(0); }
+  0% { transform: translate(-50%, -50%) scale(0) rotate(0deg);}
+  25% { transform: translate(-50%, -50%) scale(0.3) rotate(90deg); }
+  50% { transform: translate(-50%, -50%) scale(0) rotate(180deg); }
+  100% { transform: translate(-50%, -50%) scale(0) rotate(360deg);}
+
 `;
 
 const Svg = styled.svg`
-  animation: 6s ${Blink} 6s infinite ease-in-out;
+  animation: 6s ${Blink} 6s infinite linear;
   position: absolute;
   height: 100px;
   width: 100px;
