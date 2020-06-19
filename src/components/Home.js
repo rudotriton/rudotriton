@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Github from 'icons/Github';
 import Signature from 'components/Signature';
-import StyledLink from 'components/StyledLink';
-import { v4 as uuidv4 } from 'uuid';
+import Github from 'icons/Github';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -24,7 +22,6 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   font-size: ${(props) => props.theme.fontSmall};
-  margin: 5px;
   padding: 5rem;
   position: relative;
 
@@ -42,27 +39,14 @@ const Box = styled.div`
 `;
 
 const Home = () => {
-  const [elem, setElems] = useState([<Signature key="1" />]);
-  const toggleClass = () => {
-    setElems([]);
-    setElems(<Signature key={uuidv4()} />);
-  };
   return (
     <Wrapper>
       <Box>
         Hi, my name is Raigo and I am learning to become a web developer and a
         designer.
-        <div
-          tabIndex={0}
-          role="button"
-          onClick={toggleClass}
-          onKeyPress={toggleClass}
-        >
-          {elem}
-        </div>
+        <Signature />
       </Box>
       <Github />
-      <StyledLink destination="/">Back to animation</StyledLink>
     </Wrapper>
   );
 };

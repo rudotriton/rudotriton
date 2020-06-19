@@ -10,7 +10,6 @@ const Wrapper = styled(Link)`
   color: white;
   position: absolute;
   border: none;
-  outline: none;
   cursor: pointer;
   top: 90vh;
   left: 50vw;
@@ -22,14 +21,28 @@ const Wrapper = styled(Link)`
   border-bottom: 2px solid transparent;
   padding: 5px 5px 5px 10px;
   ${media.phone`top: 80vh;`}
+  outline: none;
 
+  &:focus {
+    filter: drop-shadow(-0.6rem -0.6rem 0.5rem #ff545c)
+            drop-shadow(-0.6rem 0.6rem 0.5rem #bd00ae)
+            drop-shadow(0.6rem -0.6rem 0.5rem #ff3f82)
+            drop-shadow(0.6rem 0.6rem 0.5rem #6b00c3);
+    }
+  }
   &:hover {
-    border-bottom: 2px solid white;
+    filter: drop-shadow(-0.6rem -0.6rem 0.5rem #ff545c)
+            drop-shadow(-0.6rem 0.6rem 0.5rem #bd00ae)
+            drop-shadow(0.6rem -0.6rem 0.5rem #ff3f82)
+            drop-shadow(0.6rem 0.6rem 0.5rem #6b00c3);
+    }
   }
 `;
 
 const StyledLink = ({ destination, children }) => (
-  <Wrapper to={destination}>{children}</Wrapper>
+  <Wrapper tabIndex="0" to={destination}>
+    {children}
+  </Wrapper>
 );
 
 StyledLink.defaultProps = {

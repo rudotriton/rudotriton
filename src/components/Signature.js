@@ -20,7 +20,6 @@ const Wrapper = styled.div`
       animation-name: ${draw};
     }
   }
-  cursor: pointer;
 `;
 
 const Signature = () => {
