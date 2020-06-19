@@ -46,7 +46,8 @@ export const theme = {
     'linear-gradient(180deg, rgba(158,11,255,1) 18%, rgba(11,18,185,1) 24%, rgba(0,212,255,1) 30%, rgba(255,255,255,1) 38%, rgba(255,255,255,1) 49%, rgba(38,38,38,1) 49%, rgba(201,18,207,1) 56%, rgba(0,123,255,1) 64%, rgba(255,255,255,1) 75%)',
   textBoxGradient:
     'linear-gradient(159deg, rgba(70, 160, 249, 1) 0%, rgba(184,5,246,1) 50%, rgba(255,0,130,1) 100%)',
-  brandGradient: 'linear-gradient(270deg, #5e00bc, #ff4c93, #ff567f, #ff6363);',
+  brandGradient:
+    'linear-gradient(225deg, #5e00bc 0%, #BF2EA3 30%, #ff4c93 60%, #ff567f 80%, #ff6363 100%);',
   fontCursive: 'Mr De Haviland, cursive',
   fontBoldItalic: 'Chakra Petch, sans-serif',
   fontMonospace: 'Share Tech Mono, monospace',

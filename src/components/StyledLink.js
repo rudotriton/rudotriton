@@ -15,7 +15,7 @@ const Wrapper = styled(Link)`
   left: 50vw;
   transform: translate(-50%, -50%);
   text-decoration: none;
-  transition: 0.25s ease;
+  transition: 0.25s filter;
   z-index: 50;
   background-color: black;
   border-bottom: 2px solid transparent;
@@ -39,8 +39,8 @@ const Wrapper = styled(Link)`
   }
 `;
 
-const StyledLink = ({ destination, children }) => (
-  <Wrapper tabIndex="0" to={destination}>
+const StyledLink = ({ to, children }) => (
+  <Wrapper tabIndex="0" to={to}>
     {children}
   </Wrapper>
 );
@@ -50,7 +50,7 @@ StyledLink.defaultProps = {
 };
 
 StyledLink.propTypes = {
-  destination: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
   children: PropTypes.node,
 };
 

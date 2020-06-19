@@ -36,7 +36,7 @@ const Background = () => (
     <Sky />
     <Land />
     <Text />
-    <StyledLink destination="home">
+    <StyledLink to="/home">
       <Typed
         strings={['Continue', 'Proceed', 'Carry On', 'Advance', 'Go On']}
         typeSpeed={100}

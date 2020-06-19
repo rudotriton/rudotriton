@@ -27,6 +27,7 @@ const Box = styled.div`
 
   &::before {
     background: ${(props) => props.theme.brandGradient};
+    box-shadow: 2rem 2rem 2rem #242048;
     bottom: 0;
     content: '';
     left: 0;

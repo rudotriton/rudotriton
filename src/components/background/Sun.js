@@ -6,7 +6,7 @@ const Scan = keyframes`
 `;
 
 const Scanline = keyframes`
-  0% { transform: translate3d(0, 200000%, 0); }
+  0% { transform: translate3d(0, 80000%, 0); }
 `;
 
 const Scanner = styled.div`
@@ -41,7 +41,8 @@ const Scanner = styled.div`
       ${(props) => props.theme.darkPurple} 51%
     );
     background-size: 100% 4px;
-    animation: ${Scan} 2s steps(60) infinite;
+    /* animation: ${Scan} 2s steps(60) infinite; */
+    animation: ${Scan} 2s infinite;
     will-change: transform;
   }
 `;
