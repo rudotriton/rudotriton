@@ -1,14 +1,23 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Background from 'components/background/Background';
+import { BrowserRouter } from 'react-router-dom';
 import Home from 'components/Home';
+import FourOhFour from 'components/404';
+import { AnimatedRoutes, RouteTransition } from './RouteTransition';
 
 const AppRouter = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <Switch>
-      <Route component={Home} path="/home" exact />
-      <Route component={Background} path="/" />
-    </Switch>
+    <AnimatedRoutes>
+      <RouteTransition exact path="/home">
+        <Home />
+      </RouteTransition>
+      <RouteTransition exact path="/">
+        <Background />
+      </RouteTransition>
+      <RouteTransition>
+        <FourOhFour />
+      </RouteTransition>
+    </AnimatedRoutes>
   </BrowserRouter>
 );
 
