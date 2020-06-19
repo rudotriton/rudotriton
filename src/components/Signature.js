@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const draw = keyframes`
@@ -23,49 +23,9 @@ const Wrapper = styled.div`
 `;
 
 const Signature = () => {
-  const autograph = useRef(null);
-
-  const calcPaths = () => {
-    const paths = autograph.current.childNodes;
-
-    let totalLength = 0;
-    let delay = 1;
-
-    const totalDuration = 5;
-
-    // find full path length
-    paths.forEach((path) => {
-      const pathLength = path.getTotalLength();
-      totalLength += pathLength;
-    });
-
-    paths.forEach((path) => {
-      const element = path;
-
-      // get current path length
-      const pathLength = path.getTotalLength();
-
-      // calculate current animation duration
-      const duration = (pathLength / totalLength) * totalDuration;
-
-      element.style.animationDuration = `${duration < 0.2 ? 0.2 : duration}s`;
-      element.style.animationDelay = `${delay}s`;
-
-      element.setAttribute('stroke-dasharray', pathLength);
-      element.setAttribute('stroke-dashoffset', pathLength);
-
-      delay += duration + 0.2;
-    });
-    return true;
-  };
-  useEffect(() => {
-    calcPaths();
-  }, []);
-
   return (
     <Wrapper>
       <svg
-        ref={autograph}
         width="862"
         height="431"
         viewBox="0 0 862 431"
@@ -78,20 +38,34 @@ const Signature = () => {
           strokeWidth="15"
           strokeLinecap="round"
           strokeLinejoin="round"
+          style={{
+            animationDuration: '2.1968991149156754s',
+            animationDelay: '1s',
+            strokeDasharray: 1695.222412109375,
+            strokeDashoffset: 1695.222412109375,
+          }}
         />
         <path
-          fillRule="evenodd"
-          clipRule="evenodd"
           d="M381.588 175.552C370.858 171.865 361.482 174.242 354.371 177.338C347.261 180.433 334.152 190.82 334.152 206.033C334.152 221.246 339.466 227.371 346.919 233.255C354.371 239.139 368.339 240.001 380.64 235.65C392.942 231.299 403.882 221.198 405.129 207.411C406.376 193.623 392.317 179.239 381.588 175.552Z"
           stroke="white"
           strokeWidth="15"
+          style={{
+            animationDuration: '0.2760294827885646s',
+            animationDelay: '3.3968991149156755s',
+            strokeDasharray: 212.9962921142578,
+            strokeDashoffset: 212.9962921142578,
+          }}
         />
         <path
-          fillRule="evenodd"
-          clipRule="evenodd"
           d="M247.137 132.21C239.872 129.638 234.989 130.434 230.641 132.937C226.294 135.44 224.314 139.896 224.034 145.127C223.755 150.359 225.153 156.525 229.841 159.94C234.528 163.355 241.425 165.911 248.69 162.784C255.955 159.657 259.204 153.5 258.763 147.663C258.321 141.826 254.402 134.782 247.137 132.21Z"
           stroke="white"
           strokeWidth="15"
+          style={{
+            animationDuration: '0.13996794868980822s',
+            animationDelay: '3.8729285977042403s',
+            strokeDasharray: 108.00532531738281,
+            strokeDashoffset: 108.00532531738281,
+          }}
         />
         <path
           d="M382.03 38.6388C424.407 50.9581 441.783 46.5674 469.584 32.8485C478.86 28.2712 464.114 0.632088 463.745 9.87985C460.185 99.1037 604.394 451.327 553.826 414.479C439.866 331.439 398.847 333.374 469.584 285.06C523.261 248.399 545.875 232.939 564.426 196.278C582.978 159.617 548.525 128.698 541.016 179.052C537.854 200.255 544.108 231.614 567.077 237.356C590.045 243.099 602.855 225.872 607.272 203.345C611.689 180.819 602.413 150.341 595.787 159.617C589.162 168.893 609.922 171.543 621.406 168.893C632.89 166.242 641.724 164.034 641.724 173.31C641.724 183.984 622.289 232.498 647.466 233.823C672.643 235.148 684.569 145.924 674.41 176.402C664.251 206.879 696.054 241.332 710.63 232.939C725.206 224.547 736.5 164.5 726 168.5C715.5 172.5 732 190 752.5 187C773 184 774.5 167.5 791 179.5C807.5 191.5 783.5 158.161 767 181C750.5 203.839 752 231 769 237C786 243 805.667 204.667 813 190C801 203.833 821.5 247 850 225"
@@ -99,6 +73,12 @@ const Signature = () => {
           strokeWidth="15"
           strokeLinecap="round"
           strokeLinejoin="round"
+          style={{
+            animationDuration: '2.3871034536059517s',
+            animationDelay: '4.212896546394049s',
+            strokeDasharray: 1841.9923095703125,
+            strokeDashoffset: 1841.9923095703125,
+          }}
         />
       </svg>
     </Wrapper>
