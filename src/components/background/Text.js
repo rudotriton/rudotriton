@@ -99,16 +99,15 @@ const FirstNameWrap = styled.div`
   position: absolute;
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   animation: ${SlideAppear} 4s 2s linear forwards;
-  will-change: transform;
   ${media.phone`left: 3%; bottom: 30%;`}
 `;
 
 const FirstName = styled.span`
   font-size: ${(props) => props.theme.fontLarge};
   font-family: ${(props) => props.theme.fontCursive};
+  font-weight: 1000;
   color: ${(props) => props.theme.white};
   animation: ${(props) => Flicker(props.theme.cyan)} 1.5s 6s infinite alternate;
-  will-change: transform;
   ${(props) => media.phone`font-size: ${props.theme.fontMedium};`}
 `;
 

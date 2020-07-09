@@ -8,11 +8,11 @@ import { AnimatedRoutes, RouteTransition } from './RouteTransition';
 const AppRouter = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <AnimatedRoutes>
-      <RouteTransition exact path="/home">
-        <Home />
-      </RouteTransition>
       <RouteTransition exact path="/">
         <Background />
+      </RouteTransition>
+      <RouteTransition exact path="/home">
+        <Home />
       </RouteTransition>
       <RouteTransition>
         <FourOhFour />
