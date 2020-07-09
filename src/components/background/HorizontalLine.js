@@ -14,7 +14,7 @@ const StyledLine = styled.line`
   animation-delay: ${(props) => -props.delay / 4}s;
 `;
 
-export default function HorizontalLine({ x1, x2, y1, y2, delay, start }) {
+export default function HorizontalLine({ x1, x2, y1, y2, delay }) {
   return <StyledLine x1={x1} y1={y1} x2={x2} y2={y2} delay={delay} />;
 }
 
