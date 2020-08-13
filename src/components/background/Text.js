@@ -58,10 +58,11 @@ const LastName = styled.span`
   color: transparent;
   -webkit-text-stroke: 1px white;
   ${(props) => media.phone`font-size: ${props.theme.fontMedium};`}
+  text-transform: uppercase;
 
   &::after {
     background: none;
-    content: 'JERVA';
+    content: 'jerva';
     left: 0;
     top: 0;
     z-index: -1;
@@ -109,15 +110,16 @@ const FirstName = styled.span`
   color: ${(props) => props.theme.white};
   animation: ${(props) => Flicker(props.theme.cyan)} 1.5s 6s infinite alternate;
   ${(props) => media.phone`font-size: ${props.theme.fontMedium};`}
+  text-transform: capitalize;
 `;
 
 const Text = () => (
   <Wrapper>
     <FirstNameWrap>
-      <FirstName>Raigo</FirstName>
+      <FirstName>raigo</FirstName>
     </FirstNameWrap>
     <LastNameWrap>
-      <LastName>JERVA</LastName>
+      <LastName>jerva</LastName>
     </LastNameWrap>
   </Wrapper>
 );
