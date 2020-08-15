@@ -1,15 +1,15 @@
+import Star from 'components/background/Star';
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import Star from 'components/background/Star';
 
 const FlyUp = keyframes`
   0% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     opacity: 0;
   }
 
   10% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 
   25% {
@@ -17,19 +17,19 @@ const FlyUp = keyframes`
   }
 
   50% {
-    transform: translateY(-300px);
+    transform: translate3d(0, -300px, 0);
     opacity: 0;
   }
 `;
 
 const FlyRight = keyframes`
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
     opacity: 0;
   }
 
   10% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   25% {
@@ -37,19 +37,19 @@ const FlyRight = keyframes`
   }
 
   50% {
-    transform: translateX(300px);
+    transform: translate3d(300px, 0, 0);
     opacity: 0;
   }
 `;
 
 const FlyDown = keyframes`
   0% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     opacity: 0;
   }
 
   10% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 
   25% {
@@ -57,19 +57,19 @@ const FlyDown = keyframes`
   }
 
   50% {
-    transform: translateY(300px);
+    transform: translate3d(0, 300px, 0);
     opacity: 0;
   }
 `;
 
 const FlyLeft = keyframes`
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
     opacity: 0;
   }
 
   10% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   25% {
@@ -77,7 +77,7 @@ const FlyLeft = keyframes`
   }
 
   50% {
-    transform: translateX(-300px);
+    transform: translate3d(-300px, 0, 0);
     opacity: 0;
   }
 `;

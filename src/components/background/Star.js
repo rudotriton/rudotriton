@@ -1,12 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Blink = () => keyframes`
-  0% { transform: translate(-50%, -50%) scale(0) rotate(0deg);}
-  25% { transform: translate(-50%, -50%) scale(0.3) rotate(90deg); }
-  50% { transform: translate(-50%, -50%) scale(0) rotate(180deg); }
-  100% { transform: translate(-50%, -50%) scale(0) rotate(360deg);}
+  0% { transform: translate3d(-50%, -50%, 0) scale(0) rotate(0deg);}
+  25% { transform: translate3d(-50%, -50%, 0) scale(0.3) rotate(90deg); }
+  50% { transform: translate3d(-50%, -50%, 0) scale(0) rotate(180deg); }
+  100% { transform: translate3d(-50%, -50%, 0) scale(0) rotate(360deg);}
 
 `;
 
@@ -17,7 +17,7 @@ const Svg = styled.svg`
   width: 100px;
   left: ${(props) => props.x}vw;
   top: ${(props) => props.y}vh;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate3d(-50%, -50%, 0) scale(0);
   fill: white;
   z-index: -4;
 `;
