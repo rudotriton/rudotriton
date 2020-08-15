@@ -1,5 +1,5 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 const Wrapper = styled.div`
   height: 30vh;
@@ -46,8 +46,13 @@ const HorizontalLine = styled.div`
   position: absolute;
   top: 0;
   background-color: ${(p) => p.theme.cyan};
-  animation: ${MoveToBottom} 4s infinite ${(props) => -props.delay / 4}s cubic-bezier(1, 0.06, 0.78, 0);
+  animation: ${MoveToBottom} 4s infinite ${(props) => -props.delay / 4}s
+    cubic-bezier(1, 0.06, 0.78, 0);
   transform: translate3d(0, 0, 0);
+  @media (prefers-reduced-motion) {
+    animation: none;
+    transform: translate3d(0, ${(p) => (p.delay ** 1.9 / 30) * 7.5}vh, 0);
+  }
 `;
 
 const Land = () => {
@@ -65,10 +70,8 @@ const Land = () => {
   const generateHorizontals = () => {
     const horizontals = [];
 
-    for (let i = 1; i <= 16; i += 1) {
-      horizontals.push(
-        <HorizontalLine key={i} delay={i} />
-      );
+    for (let i = 0; i <= 15; i += 1) {
+      horizontals.push(<HorizontalLine key={i} delay={i} />);
     }
 
     return horizontals;
@@ -77,9 +80,7 @@ const Land = () => {
   return (
     <Wrapper>
       <MergedHorizon />
-      <SVG>
-        {generateVerticals()}
-      </SVG>
+      <SVG>{generateVerticals()}</SVG>
       {generateHorizontals()}
     </Wrapper>
   );

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { Helmet } from "react-helmet";
 
-const faviconLoc = 'images/favicons';
+const faviconLoc = "images/favicons";
 
 const Favicons = () => (
   <Helmet>

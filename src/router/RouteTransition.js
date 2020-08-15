@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { AnimatePresence } from 'framer-motion';
-import { Route, Switch, useLocation } from 'react-router-dom';
-import MountTransition from 'router/MountTransition';
+import { AnimatePresence } from "framer-motion";
+import PropTypes from "prop-types";
+import React from "react";
+import { Route, Switch, useLocation } from "react-router-dom";
+import MountTransition from "router/MountTransition";
 
 export const RouteTransition = ({ children, exact, path, slide, slideUp }) => (
   <Route exact={exact} path={path}>

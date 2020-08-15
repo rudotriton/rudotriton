@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import media from 'util/mediaQueries';
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import media from "util/mediaQueries";
 
 const Wrapper = styled(Link)`
   font-size: ${(props) => props.theme.fontSmall};

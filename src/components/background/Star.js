@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import PropTypes from "prop-types";
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 const Blink = () => keyframes`
   0% { transform: translate3d(-50%, -50%, 0) scale(0) rotate(0deg);}
@@ -20,6 +20,9 @@ const Svg = styled.svg`
   transform: translate3d(-50%, -50%, 0) scale(0);
   fill: white;
   z-index: -4;
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
 `;
 
 const Star = ({ x, y }) => (

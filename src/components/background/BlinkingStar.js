@@ -1,6 +1,6 @@
-import Star from 'components/background/Star';
-import React, { useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import Star from "components/background/Star";
+import React, { useState } from "react";
+import styled, { keyframes } from "styled-components";
 
 const FlyUp = keyframes`
   0% {
@@ -82,7 +82,7 @@ const FlyLeft = keyframes`
   }
 `;
 
-const cubicBez = 'cubic-bezier(0.86, 0.4, 1, 1)';
+const cubicBez = "cubic-bezier(0.86, 0.4, 1, 1)";
 
 const Top = styled.div`
   position: absolute;
@@ -93,6 +93,9 @@ const Top = styled.div`
   top: calc(${(props) => props.y}vh - 5px);
   left: calc(${(props) => props.x}vw - 1px);
   animation: 6s ${(props) => props.animation} 6s infinite ${cubicBez};
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
 `;
 
 const Bottom = styled.div`
@@ -104,6 +107,9 @@ const Bottom = styled.div`
   top: calc(${(props) => props.y}vh + 2px);
   left: calc(${(props) => props.x}vw - 1px);
   animation: 6s ${(props) => props.animation} 6s infinite ${cubicBez};
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
 `;
 
 const Left = styled.div`
@@ -115,6 +121,9 @@ const Left = styled.div`
   top: calc(${(props) => props.y}vh - 1px);
   left: calc(${(props) => props.x}vw - 5px);
   animation: 6s ${(props) => props.animation} 6s infinite ${cubicBez};
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
 `;
 
 const Right = styled.div`
@@ -126,6 +135,9 @@ const Right = styled.div`
   top: calc(${(props) => props.y}vh - 1px);
   left: calc(${(props) => props.x}vw + 2px);
   animation: 6s ${(props) => props.animation} 6s infinite ${cubicBez};
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
 `;
 
 const BlinkingStar = () => {
