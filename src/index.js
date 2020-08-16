@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ThemeProvider } from 'styled-components';
-import AppRouter from 'router/AppRouter';
-import Favicons from 'components/Favicons';
-import { GlobalStyle, theme } from './style';
+import Favicons from "components/Favicons";
+import React from "react";
+import ReactDOM from "react-dom";
+import AppRouter from "router/AppRouter";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle, theme } from "./style";
 
 const jsx = (
   <ThemeProvider theme={theme}>
@@ -15,4 +15,4 @@ const jsx = (
   </ThemeProvider>
 );
 
-ReactDOM.render(jsx, document.getElementById('root'));
+ReactDOM.render(jsx, document.getElementById("root"));

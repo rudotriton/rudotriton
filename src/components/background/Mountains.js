@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const LeftMountain = styled.div`
   position: absolute;
@@ -7,6 +7,7 @@ const LeftMountain = styled.div`
   height: 10vh;
   z-index: ${(props) => props.zindex};
   top: 60vh;
+	left: 0;
   background: ${(props) => props.theme.black};
   clip-path: polygon(
     0 0%,

@@ -1,5 +1,5 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 const draw = keyframes`
   100% {
@@ -39,8 +39,8 @@ const Signature = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
           style={{
-            animationDuration: '2.1968991149156754s',
-            animationDelay: '1s',
+            animationDuration: "2.1968991149156754s",
+            animationDelay: "1s",
             strokeDasharray: 1695.222412109375,
             strokeDashoffset: 1695.222412109375,
           }}
@@ -50,8 +50,8 @@ const Signature = () => {
           stroke="white"
           strokeWidth="15"
           style={{
-            animationDuration: '0.2760294827885646s',
-            animationDelay: '3.3968991149156755s',
+            animationDuration: "0.2760294827885646s",
+            animationDelay: "3.3968991149156755s",
             strokeDasharray: 212.9962921142578,
             strokeDashoffset: 212.9962921142578,
           }}
@@ -61,8 +61,8 @@ const Signature = () => {
           stroke="white"
           strokeWidth="15"
           style={{
-            animationDuration: '0.13996794868980822s',
-            animationDelay: '3.8729285977042403s',
+            animationDuration: "0.13996794868980822s",
+            animationDelay: "3.8729285977042403s",
             strokeDasharray: 108.00532531738281,
             strokeDashoffset: 108.00532531738281,
           }}
@@ -74,8 +74,8 @@ const Signature = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
           style={{
-            animationDuration: '2.3871034536059517s',
-            animationDelay: '4.212896546394049s',
+            animationDuration: "2.3871034536059517s",
+            animationDelay: "4.212896546394049s",
             strokeDasharray: 1841.9923095703125,
             strokeDashoffset: 1841.9923095703125,
           }}

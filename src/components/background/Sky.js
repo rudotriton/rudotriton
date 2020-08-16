@@ -1,8 +1,8 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import Star from 'components/background/BlinkingStar';
-import Sun from 'components/background/Sun';
-import Mountains from 'components/background/Mountains';
+import Star from "components/background/BlinkingStar";
+import Mountains from "components/background/Mountains";
+import Sun from "components/background/Sun";
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 const Pulse = keyframes`
   0% { transform: scale(1, 1); }
@@ -31,6 +31,7 @@ const BackDrop = styled.div`
     ${(props) => props.theme.black} 100%
   );
   animation: 10s ${Pulse} linear infinite;
+	transform: translate3d(0, 0, 0);
 `;
 
 // Mist in front of Sun and Mountains

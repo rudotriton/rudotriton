@@ -1,6 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-import HorizontalLine from './HorizontalLine';
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 const Wrapper = styled.div`
   height: 30vh;
@@ -9,20 +8,20 @@ const Wrapper = styled.div`
   position: absolute;
   top: 70vh;
   overflow: hidden;
-  background: ${(props) => props.theme.darkBlue};
+  background: ${(p) => p.theme.darkBlue};
   background: linear-gradient(
     180deg,
-    ${(props) => props.theme.darkBlue} 0%,
-    ${(props) => props.theme.darkPurple} 30%,
-    ${(props) => props.theme.black} 100%
+    ${(p) => p.theme.darkBlue} 0%,
+    ${(p) => p.theme.darkPurple} 30%,
+    ${(p) => p.theme.black} 100%
   );
 `;
 
-const Mist = styled.div`
+const MergedHorizon = styled.div`
   width: 100vw;
   height: 20px;
   position: absolute;
-  background-color: ${(props) => props.theme.cyan};
+  background-color: ${(p) => p.theme.cyan};
   clip-path: polygon(0 0, 100vw 0, 100vw 100%, 50vw 0, 0 100%);
 `;
 
@@ -32,8 +31,28 @@ const SVG = styled.svg`
 `;
 
 const Line = styled.line`
-  stroke: ${(props) => props.theme.cyan};
+  stroke: ${(p) => p.theme.cyan};
   stroke-width: 1;
+`;
+
+const MoveToBottom = keyframes`
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(0, 30vh, 0); }
+`;
+
+const HorizontalLine = styled.div`
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  background-color: ${(p) => p.theme.cyan};
+  animation: ${MoveToBottom} 4s infinite ${(props) => -props.delay / 4}s
+    cubic-bezier(1, 0.06, 0.78, 0);
+  transform: translate3d(0, 0, 0);
+  @media (prefers-reduced-motion) {
+    animation: none;
+    transform: translate3d(0, ${(p) => (p.delay ** 1.9 / 30) * 7.5}vh, 0);
+  }
 `;
 
 const Land = () => {
@@ -51,10 +70,8 @@ const Land = () => {
   const generateHorizontals = () => {
     const horizontals = [];
 
-    for (let i = 1; i <= 16; i += 1) {
-      horizontals.push(
-        <HorizontalLine key={i} x1="0%" y1="0%" x2="100%" y2="0%" delay={i} />
-      );
+    for (let i = 0; i <= 15; i += 1) {
+      horizontals.push(<HorizontalLine key={i} delay={i} />);
     }
 
     return horizontals;
@@ -62,11 +79,9 @@ const Land = () => {
 
   return (
     <Wrapper>
-      <Mist />
-      <SVG>
-        {generateVerticals()}
-        {generateHorizontals()}
-      </SVG>
+      <MergedHorizon />
+      <SVG>{generateVerticals()}</SVG>
+      {generateHorizontals()}
     </Wrapper>
   );
 };

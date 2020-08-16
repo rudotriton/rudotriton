@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import Signature from 'components/Signature';
-import Github from 'icons/Github';
+import Signature from "components/Signature";
+import Github from "icons/Github";
+import React from "react";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -29,7 +29,7 @@ const Box = styled.div`
     background: ${(props) => props.theme.brandGradient};
     box-shadow: 2rem 2rem 2rem #242048;
     bottom: 0;
-    content: '';
+    content: "";
     left: 0;
     margin: -5px;
     position: absolute;
