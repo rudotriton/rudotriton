@@ -53,10 +53,9 @@ const LastName = styled.span`
   font-family: ${(props) => props.theme.fontBoldItalic}, sans-serif;
   font-style: italic;
   background: ${(props) => props.theme.reflectiveChrome};
-  -webkit-background-clip: text;
+  background-clip: text;
   letter-spacing: -1px;
   color: transparent;
-  -webkit-text-stroke: 1px white;
   ${(props) => media.phone`font-size: ${props.theme.fontMedium};`}
   text-transform: uppercase;
 
@@ -67,7 +66,12 @@ const LastName = styled.span`
     top: 0;
     z-index: -1;
     position: absolute;
-    text-shadow: 0 0 40px ${(props) => props.theme.pink};
+    text-shadow: 
+    0 0 40px ${(props) => props.theme.pink},
+    -1px 1px white,
+    1px 1px white,
+    1px -1px white,
+    -1px -1px white;
   }
 `;
 

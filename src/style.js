@@ -7,10 +7,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${(props) => props.theme.font};
   }
 
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
   body {
     background: ${(props) => props.theme.black};
     width: 100vw;
