@@ -53,6 +53,7 @@ const LastName = styled.span`
   font-style: italic;
   background: ${(props) => props.theme.reflectiveChrome};
   background-clip: text;
+  -webkit-background-clip: text;
   letter-spacing: -1px;
   color: transparent;
   ${(props) => media.phone`font-size: ${props.theme.fontMedium};`}
