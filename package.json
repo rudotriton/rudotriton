@@ -4,7 +4,7 @@
   "homepage": "https://rudotriton.netlify.com",
   "private": true,
   "dependencies": {
-    "framer-motion": "^2.5.1",
+    "framer-motion": "^2.6.5",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
