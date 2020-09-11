@@ -25,10 +25,10 @@ const Scanner = styled.div`
     content: "";
     position: absolute;
     width: 100%;
-    height: 3px;
+    height: 2px;
     z-index: 501;
     background: ${(p) => p.theme.darkPurple};
-    animation: ${scan} 12s linear infinite;
+    animation: ${scan} 6s linear infinite;
     transform: translate3d(0, 0, 0);
     @media (prefers-reduced-motion) {
       animation: none;
@@ -64,8 +64,8 @@ const Scanlines = styled.div`
     ${(p) => p.theme.darkPurple} 50%,
     ${(p) => p.theme.darkPurple} 100%
   );
-  background-size: 100% 2%;
-  animation: ${(p) => spanFromTop(p.from, p.to)} 4s linear infinite;
+  background-size: 100% 1%;
+  animation: ${(p) => spanFromTop(p.from, p.to)} 8s linear infinite;
   transform: translate3d(0, 0, 0);
   @media (prefers-reduced-motion) {
     animation: none;
