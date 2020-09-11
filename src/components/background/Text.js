@@ -125,6 +125,7 @@ const FirstName = styled.span`
     left: 50%;
     position: absolute;
     z-index: -1;
+    opacity: 0;
     text-shadow: 0 0 40px #00fff0, 0 0 30px #00fff0, 0 0 20px #00fff0,
       0 0 10px #00fff0;
     animation: ${Flicker} 3s alternate 6s infinite;

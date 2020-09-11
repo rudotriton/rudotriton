@@ -25,10 +25,10 @@ const Scanner = styled.div`
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3px;
     z-index: 501;
     background: ${(p) => p.theme.darkPurple};
-    animation: ${scan} 6s linear infinite;
+    animation: ${scan} 12s linear infinite;
     transform: translate3d(0, 0, 0);
     @media (prefers-reduced-motion) {
       animation: none;
@@ -61,9 +61,10 @@ const Scanlines = styled.div`
   background: linear-gradient(
     to bottom,
     transparent 50%,
-    ${(p) => p.theme.darkPurple}
+    ${(p) => p.theme.darkPurple} 50%,
+    ${(p) => p.theme.darkPurple} 100%
   );
-  background-size: 100% 1vw;
+  background-size: 100% 2%;
   animation: ${(p) => spanFromTop(p.from, p.to)} 4s linear infinite;
   transform: translate3d(0, 0, 0);
   @media (prefers-reduced-motion) {
@@ -71,6 +72,8 @@ const Scanlines = styled.div`
     transform: translate3d(0, ${(p) => p.from}%, 0);
   }
 `;
+
+// scanlines - two elements the height of the sun that alternate moving over it
 
 export default () => (
   <Sun>
