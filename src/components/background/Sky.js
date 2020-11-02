@@ -31,7 +31,7 @@ const BackDrop = styled.div`
     ${(props) => props.theme.black} 100%
   );
   animation: 10s ${Pulse} linear infinite;
-	transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 `;
 
 // Mist in front of Sun and Mountains

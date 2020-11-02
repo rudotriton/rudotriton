@@ -7,7 +7,7 @@ const LeftMountain = styled.div`
   height: 10vh;
   z-index: ${(props) => props.zindex};
   top: 60vh;
-	left: 0;
+  left: 0;
   background: ${(props) => props.theme.black};
   clip-path: polygon(
     0 0%,
