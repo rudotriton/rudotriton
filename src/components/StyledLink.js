@@ -19,7 +19,7 @@ const Wrapper = styled(Link)`
   z-index: 50;
   background-color: black;
   border-bottom: 2px solid transparent;
-  padding: 5px 5px 5px 10px;
+  padding: 5px 10px;
   ${media.phone`top: 80vh;`}
   outline: none;
 
