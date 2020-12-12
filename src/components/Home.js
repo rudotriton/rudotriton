@@ -43,8 +43,7 @@ const Home = () => {
   return (
     <Wrapper>
       <Box>
-        Hi, my name is Raigo and I am learning to become a web developer and a
-        designer.
+        Hi, I&apos;m Raigo and I am a web developer and a designer.
         <Signature />
       </Box>
       <Github />
