@@ -39,17 +39,15 @@ const Box = styled.div`
   }
 `;
 
-const Home = () => {
-  return (
-    <Wrapper>
-      <Box>
-        Hi, I&apos;m Raigo and I am a web developer and a designer.
-        <Signature />
-      </Box>
-      <Github />
-    </Wrapper>
-  );
-};
+const Home = () => (
+  <Wrapper>
+    <Box>
+      Hi, I&apos;m Raigo and I am a web developer and a designer.
+      <Signature />
+    </Box>
+    <Github />
+  </Wrapper>
+);
 
 Home.propTypes = {};
 

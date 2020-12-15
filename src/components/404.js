@@ -27,14 +27,12 @@ const Box = styled.div`
   box-shadow: 1rem 1rem 2rem #553396;
 `;
 
-const FourOhFour = () => {
-  return (
-    <Wrapper>
-      <Box>This place is reserved for a future project :)</Box>
-      <StyledLink to="/home">Back Home</StyledLink>
-    </Wrapper>
-  );
-};
+const FourOhFour = () => (
+  <Wrapper>
+    <Box>This place is reserved for a future project :)</Box>
+    <StyledLink to="/home">Back Home</StyledLink>
+  </Wrapper>
+);
 
 FourOhFour.defaultProps = {};
 
