@@ -22,6 +22,10 @@ const A = styled.a`
       drop-shadow(-0.3rem 0.3rem 0.5rem #bd00ae)
       drop-shadow(0.3rem -0.3rem 0.5rem #ff3f82)
       drop-shadow(0.3rem 0.3rem 0.5rem #6b00c3);
+
+    p {
+      color: black;
+    }
   }
   &:focus > svg,
   &:active > svg {
