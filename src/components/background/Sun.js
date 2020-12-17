@@ -27,7 +27,7 @@ const Scanner = styled.div`
     width: 100%;
     height: 2px;
     z-index: 501;
-    background: ${(p) => p.theme.darkPurple};
+    background: ${(p) => p.theme.scanline};
     animation: ${scan} 6s linear infinite;
     transform: translate3d(0, 0, 0);
     @media (prefers-reduced-motion) {
@@ -44,6 +44,9 @@ const Sun = styled.div`
   overflow: hidden;
   top: 65vh;
   left: 50vw;
+  box-shadow: 0 0 14rem ${(p) => p.theme.lightPink},
+    0 0 5rem ${(p) => p.theme.lightPink}, 0 0 2rem ${(p) => p.theme.lightPink},
+    0 0 1rem ${(p) => p.theme.lightPink};
   transform: translate3d(-50%, -50%, 0);
   background: ${(p) => p.theme.yellow};
   background: linear-gradient(
@@ -61,8 +64,8 @@ const Scanlines = styled.div`
   background: linear-gradient(
     to bottom,
     transparent 50%,
-    ${(p) => p.theme.darkPurple} 50%,
-    ${(p) => p.theme.darkPurple} 100%
+    ${(p) => p.theme.scanline} 50%,
+    ${(p) => p.theme.scanline} 100%
   );
   background-size: 100% 1%;
   animation: ${(p) => spanFromTop(p.from, p.to)} 8s linear infinite;

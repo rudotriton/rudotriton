@@ -43,7 +43,7 @@ const Mist = styled.div`
   transform: translate(-50%, -50%);
   top: 65vh;
   left: 50vw;
-  box-shadow: 0 0 200px 20px ${(props) => props.theme.pink};
+  box-shadow: 0 0 10rem 2rem ${(props) => props.theme.lightPink};
 `;
 
 const Sky = () => (

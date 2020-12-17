@@ -28,11 +28,13 @@ const MergedHorizon = styled.div`
 const SVG = styled.svg`
   width: 100vw;
   height: 40vh;
+  filter: drop-shadow(0 0 1rem ${(p) => p.theme.blue})
+    drop-shadow(0 0 0.5rem ${(p) => p.theme.blue});
 `;
 
 const Line = styled.line`
   stroke: ${(p) => p.theme.cyan};
-  stroke-width: 1;
+  stroke-width: 2;
 `;
 
 const MoveToBottom = keyframes`
@@ -42,9 +44,12 @@ const MoveToBottom = keyframes`
 
 const HorizontalLine = styled.div`
   width: 100%;
-  height: 1px;
+  height: 2px;
   position: absolute;
   top: 0;
+
+  box-shadow: 0 0 2rem ${(p) => p.theme.blue}, 0 0 1rem ${(p) => p.theme.blue},
+    0 0 0.5rem ${(p) => p.theme.blue};
   background-color: ${(p) => p.theme.cyan};
   animation: ${MoveToBottom} 4s infinite ${(props) => -props.delay / 4}s
     cubic-bezier(1, 0.06, 0.78, 0);
